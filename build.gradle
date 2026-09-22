@@ -1,0 +1,35 @@
+plugins {
+    id 'java-library'
+    id 'net.neoforged.moddev' version '2.0.140'
+}
+
+version = mod_version
+group = mod_group_id
+base { archivesName = mod_id }
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+repositories {
+    maven { name = 'C4 Maven'; url = 'https://maven.theillusivec4.top/' }
+}
+
+dependencies {
+    compileOnly "top.theillusivec4.curios:curios-neoforge:${curios_version}:api"
+    runtimeOnly "top.theillusivec4.curios:curios-neoforge:${curios_version}"
+}
+
+neoForge {
+    version = project.neo_version
+    runs {
+        client { client(); gameDirectory = project.file('run') }
+        server { server(); gameDirectory = project.file('run-server') }
+    }
+    mods { "${mod_id}" { sourceSet sourceSets.main } }
+}
+
+sourceSets.main.resources { srcDir 'src/generated/resources' }
+
+tasks.named('processResources', ProcessResources).configure {
+    var replaceProperties = [minecraft_version_range:minecraft_version_range, neo_version:neo_version, loader_version_range:loader_version_range, mod_id:mod_id, mod_name:mod_name, mod_license:mod_license, mod_version:mod_version]
+    inputs.properties replaceProperties
+    filesMatching('META-INF/neoforge.mods.toml') { expand replaceProperties }
+}
