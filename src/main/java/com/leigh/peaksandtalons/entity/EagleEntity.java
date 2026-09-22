@@ -11,7 +11,6 @@ import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
-import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -26,7 +25,7 @@ public class EagleEntity extends TamableAnimal {
     public EagleEntity(EntityType<? extends EagleEntity> type, Level level) { super(type, level); }
 
     public static AttributeSupplier.Builder attributes() {
-        return Animal.createAnimalAttributes()
+        return LivingEntity.createLivingAttributes()
             .add(Attributes.MAX_HEALTH, 30)
             .add(Attributes.MOVEMENT_SPEED, 0.32)
             .add(Attributes.FLYING_SPEED, 0.55)
@@ -40,6 +39,10 @@ public class EagleEntity extends TamableAnimal {
         goalSelector.addGoal(4, new RandomStrollGoal(this, 1.0));
         goalSelector.addGoal(5, new LookAtPlayerGoal(this, Player.class, 8));
         goalSelector.addGoal(6, new RandomLookAroundGoal(this));
+    }
+
+    @Override public boolean isFood(ItemStack stack) {
+        return isFish(stack);
     }
 
     private boolean isFish(ItemStack stack) {
