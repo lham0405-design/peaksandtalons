@@ -1,1 +1,1 @@
-{"parent":"minecraft:item/generated","textures":{"layer0":"peaksandtalons:item/netherite_chain","layer1":"peaksandtalons:item/socket_redstone"}}
+{"parent":"minecraft:item/generated","textures":{"layer0":"peaksandtalons:item/chain_netherite","layer1":"peaksandtalons:item/socket_redstone"}}

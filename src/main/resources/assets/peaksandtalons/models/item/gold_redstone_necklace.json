@@ -1,1 +1,1 @@
-{"parent":"minecraft:item/generated","textures":{"layer0":"peaksandtalons:item/gold_chain","layer1":"peaksandtalons:item/socket_redstone"}}
+{"parent":"minecraft:item/generated","textures":{"layer0":"peaksandtalons:item/chain_gold","layer1":"peaksandtalons:item/socket_redstone"}}
