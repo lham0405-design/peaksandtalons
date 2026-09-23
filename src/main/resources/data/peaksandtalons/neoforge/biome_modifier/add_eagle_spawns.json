@@ -1,0 +1,17 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "minecraft:windswept_hills",
+    "minecraft:windswept_gravelly_hills",
+    "minecraft:windswept_forest",
+    "minecraft:jagged_peaks",
+    "minecraft:frozen_peaks",
+    "minecraft:stony_peaks"
+  ],
+  "spawners": {
+    "type": "peaksandtalons:eagle",
+    "weight": 3,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}
