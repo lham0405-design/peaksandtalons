@@ -2,9 +2,11 @@ package com.leigh.peaksandtalons.entity;
 
 import com.leigh.peaksandtalons.registry.ModEntities;
 import com.leigh.peaksandtalons.registry.ModItems;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.TamableAnimal;
@@ -29,7 +31,8 @@ public class EagleEntity extends TamableAnimal {
             .add(Attributes.MAX_HEALTH, 30)
             .add(Attributes.MOVEMENT_SPEED, 0.32)
             .add(Attributes.FLYING_SPEED, 0.55)
-            .add(Attributes.ATTACK_DAMAGE, 6);
+            .add(Attributes.ATTACK_DAMAGE, 6)
+            .add(Attributes.FOLLOW_RANGE, 32);
     }
 
     @Override protected void registerGoals() {
@@ -37,14 +40,11 @@ public class EagleEntity extends TamableAnimal {
         goalSelector.addGoal(1, new SitWhenOrderedToGoal(this));
         goalSelector.addGoal(2, new FollowOwnerGoal(this, 1.2, 6, 2));
         goalSelector.addGoal(4, new RandomStrollGoal(this, 1.0));
-        goalSelector.addGoal(5, new LookAtPlayerGoal(this, Player.class, 8));
+        goalSelector.addGoal(5, new LookAtPlayerGoal(this, Player.class, 10));
         goalSelector.addGoal(6, new RandomLookAroundGoal(this));
     }
 
-    @Override public boolean isFood(ItemStack stack) {
-        return isFish(stack);
-    }
-
+    @Override public boolean isFood(ItemStack stack) { return isFish(stack); }
     private boolean isFish(ItemStack stack) {
         return stack.is(Items.COD) || stack.is(Items.SALMON) || stack.is(Items.TROPICAL_FISH);
     }
@@ -55,33 +55,46 @@ public class EagleEntity extends TamableAnimal {
             if (!player.getAbilities().instabuild) stack.shrink(1);
             if (!level().isClientSide && random.nextInt(3) == 0) {
                 tame(player);
+                setOrderedToSit(false);
                 level().broadcastEntityEvent(this, (byte) 7);
-                player.addItem(new ItemStack(ModItems.EYE_OF_THE_EAGLE.get()));
+                if (!player.addItem(new ItemStack(ModItems.EYE_OF_THE_EAGLE.get()))) {
+                    spawnAtLocation(ModItems.EYE_OF_THE_EAGLE.get());
+                }
             }
             return InteractionResult.sidedSuccess(level().isClientSide);
         }
         if (isTame() && isOwnedBy(player) && !saddled && stack.is(Items.SADDLE)) {
             saddled = true;
+            setOrderedToSit(false);
             if (!player.getAbilities().instabuild) stack.shrink(1);
             return InteractionResult.sidedSuccess(level().isClientSide);
         }
         if (isTame() && isOwnedBy(player) && saddled && !player.isShiftKeyDown()) {
+            setOrderedToSit(false);
             if (!level().isClientSide) player.startRiding(this);
             return InteractionResult.sidedSuccess(level().isClientSide);
         }
         return super.mobInteract(player, hand);
     }
 
+    @Override public void tick() {
+        super.tick();
+        setNoGravity(saddled && isVehicle());
+        if (isVehicle()) fallDistance = 0;
+    }
+
     @Override public void travel(Vec3 input) {
         LivingEntity rider = getControllingPassenger();
         if (saddled && rider instanceof Player) {
             setYRot(rider.getYRot());
+            yRotO = getYRot();
             setXRot(rider.getXRot() * 0.5F);
             float forward = rider.zza;
             float strafe = rider.xxa * 0.5F;
-            double vertical = -rider.getXRot() / 90.0 * 0.6;
-            setSpeed((float) getAttributeValue(Attributes.FLYING_SPEED));
-            super.travel(new Vec3(strafe, vertical, forward));
+            double vertical = -rider.getXRot() / 90.0D;
+            if (Math.abs(vertical) < 0.08D) vertical = 0;
+            setSpeed((float)getAttributeValue(Attributes.FLYING_SPEED));
+            super.travel(new Vec3(strafe, vertical * 0.85D, forward));
             return;
         }
         super.travel(input);
@@ -91,7 +104,23 @@ public class EagleEntity extends TamableAnimal {
         return getFirstPassenger() instanceof LivingEntity living ? living : null;
     }
 
-    @Override public void die(net.minecraft.world.damagesource.DamageSource source) {
+    @Override protected boolean canAddPassenger(net.minecraft.world.entity.Entity passenger) {
+        return getPassengers().isEmpty() && passenger instanceof Player;
+    }
+
+    @Override public void addAdditionalSaveData(CompoundTag tag) {
+        super.addAdditionalSaveData(tag);
+        tag.putBoolean("Saddled", saddled);
+        tag.putBoolean("VengeanceSpawned", vengeanceSpawned);
+    }
+
+    @Override public void readAdditionalSaveData(CompoundTag tag) {
+        super.readAdditionalSaveData(tag);
+        saddled = tag.getBoolean("Saddled");
+        vengeanceSpawned = tag.getBoolean("VengeanceSpawned");
+    }
+
+    @Override public void die(DamageSource source) {
         boolean retaliate = !isTame() && !vengeanceSpawned && !level().isClientSide;
         super.die(source);
         if (retaliate && level() instanceof ServerLevel server) {
