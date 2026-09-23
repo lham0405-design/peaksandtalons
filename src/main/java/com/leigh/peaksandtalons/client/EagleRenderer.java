@@ -2,22 +2,22 @@ package com.leigh.peaksandtalons.client;
 
 import com.leigh.peaksandtalons.PeaksAndTalons;
 import com.leigh.peaksandtalons.entity.EagleEntity;
-import net.minecraft.client.renderer.entity.EntityRenderer;
+import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
+import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.resources.ResourceLocation;
 
-/**
- * Stable alpha renderer. This keeps EagleEntity client creation safe while
- * necklace/component assets and gameplay are validated. The dedicated modeled
- * eagle renderer is the next visual milestone and is intentionally isolated
- * from the playable asset build so it cannot block testing.
- */
-public class EagleRenderer extends EntityRenderer<EagleEntity> {
+public class EagleRenderer extends MobRenderer<EagleEntity, EagleModel> {
     private static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(
         PeaksAndTalons.MOD_ID, "textures/entity/eagle.png");
 
     public EagleRenderer(EntityRendererProvider.Context context) {
-        super(context);
+        super(context, new EagleModel(context.bakeLayer(EagleModel.LAYER_LOCATION)), 0.7F);
+    }
+
+    @Override
+    protected void scale(EagleEntity eagle, PoseStack poseStack, float partialTickTime) {
+        poseStack.scale(1.35F, 1.35F, 1.35F);
     }
 
     @Override
