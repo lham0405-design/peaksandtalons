@@ -1,26 +1,27 @@
 package com.leigh.peaksandtalons.client;
 
+import com.leigh.peaksandtalons.PeaksAndTalons;
 import com.leigh.peaksandtalons.entity.EagleEntity;
-import net.minecraft.client.model.geom.ModelLayers;
+import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
-import net.minecraft.client.renderer.entity.ParrotRenderer;
 import net.minecraft.resources.ResourceLocation;
 
 /**
- * Playable-alpha eagle renderer. It reuses the vanilla parrot renderer/model
- * so the custom EagleEntity has a stable visible body on NeoForge 1.21.1.
- * A dedicated eagle model/texture can replace this after gameplay validation.
+ * Stable alpha renderer. This keeps EagleEntity client creation safe while
+ * necklace/component assets and gameplay are validated. The dedicated modeled
+ * eagle renderer is the next visual milestone and is intentionally isolated
+ * from the playable asset build so it cannot block testing.
  */
-public class EagleRenderer extends ParrotRenderer {
-    private static final ResourceLocation EAGLE_TEXTURE =
-        ResourceLocation.withDefaultNamespace("textures/entity/parrot/parrot_grey.png");
+public class EagleRenderer extends EntityRenderer<EagleEntity> {
+    private static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(
+        PeaksAndTalons.MOD_ID, "textures/entity/eagle.png");
 
     public EagleRenderer(EntityRendererProvider.Context context) {
         super(context);
     }
 
     @Override
-    public ResourceLocation getTextureLocation(net.minecraft.world.entity.animal.Parrot parrot) {
-        return EAGLE_TEXTURE;
+    public ResourceLocation getTextureLocation(EagleEntity entity) {
+        return TEXTURE;
     }
 }
