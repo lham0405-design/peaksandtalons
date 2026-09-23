@@ -14,5 +14,10 @@ public final class ClientEvents {
         event.registerEntityRenderer(ModEntities.EAGLE.get(), EagleRenderer::new);
     }
 
+    @SubscribeEvent
+    public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
+        event.registerLayerDefinition(EagleModel.LAYER_LOCATION, EagleModel::createBodyLayer);
+    }
+
     private ClientEvents() {}
 }
