@@ -5,6 +5,7 @@ import com.leigh.peaksandtalons.item.*;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.SpawnEggItem;
+import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import java.util.LinkedHashMap;
@@ -18,8 +19,8 @@ public final class ModItems {
     public static final DeferredItem<Item> REDSTONE_SOCKET = ITEMS.registerSimpleItem("redstone_socket");
     public static final DeferredItem<Item> EYE_OF_THE_EAGLE = ITEMS.registerSimpleItem("eye_of_the_eagle", new Item.Properties().rarity(Rarity.RARE));
     public static final DeferredItem<Item> DRAGONS_EGG_SOCKET = ITEMS.registerSimpleItem("dragons_egg_socket", new Item.Properties().rarity(Rarity.EPIC));
-    public static final DeferredItem<SpawnEggItem> EAGLE_SPAWN_EGG = ITEMS.registerItem("eagle_spawn_egg",
-        properties -> new SpawnEggItem(properties.spawnEgg(ModEntities.EAGLE.get())));
+    public static final DeferredItem<SpawnEggItem> EAGLE_SPAWN_EGG = ITEMS.register("eagle_spawn_egg",
+        () -> new DeferredSpawnEggItem(ModEntities.EAGLE::get, 0x4A3526, 0xE8E2D2, new Item.Properties()));
     public static final Map<String, DeferredItem<NecklaceItem>> NECKLACES = new LinkedHashMap<>();
 
     static {
