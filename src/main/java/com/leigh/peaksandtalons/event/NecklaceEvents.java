@@ -13,6 +13,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.event.entity.living.LivingFallEvent;
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 import top.theillusivec4.curios.api.CuriosApi;
 
@@ -24,6 +25,11 @@ public final class NecklaceEvents {
         return CuriosApi.getCuriosInventory(player)
             .flatMap(h -> h.findFirstCurio(stack -> stack.getItem() instanceof NecklaceItem))
             .map(r -> r.stack()).orElse(ItemStack.EMPTY);
+    }
+
+    public static boolean hasSocket(Player player, SocketType socket) {
+        ItemStack stack = equippedNecklace(player);
+        return stack.getItem() instanceof NecklaceItem necklace && necklace.socket() == socket;
     }
 
     @SubscribeEvent
@@ -39,6 +45,19 @@ public final class NecklaceEvents {
         if (socket == SocketType.REDSTONE) refresh(player, MobEffects.DIG_SPEED);
         if (socket == SocketType.MAGMA_CREAM) refresh(player, MobEffects.FIRE_RESISTANCE);
         if (socket == SocketType.PRISMARINE) refresh(player, MobEffects.WATER_BREATHING);
+
+        // Eye of the Eagle is intended to behave as accessory-based aerial mobility.
+        // Slow falling makes early alpha testing safe while leaving the chest slot free.
+        if (socket == SocketType.EYE_OF_THE_EAGLE && !player.onGround()) {
+            refresh(player, MobEffects.SLOW_FALLING);
+        }
+    }
+
+    @SubscribeEvent
+    public static void onFall(LivingFallEvent event) {
+        if (event.getEntity() instanceof Player player && hasSocket(player, SocketType.EYE_OF_THE_EAGLE)) {
+            event.setDamageMultiplier(0.0F);
+        }
     }
 
     private static void refresh(Player player, net.minecraft.core.Holder<MobEffect> effect) {
