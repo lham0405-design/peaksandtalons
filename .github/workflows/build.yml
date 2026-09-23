@@ -22,11 +22,18 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.10.2'
+      - name: Generate packaged Eagle texture
+        shell: bash
+        run: |
+          mkdir -p src/main/resources/assets/peaksandtalons/textures/entity
+          echo 'iVBORw0KGgoAAAANSUhEUgAAAGAAAABACAYAAADlNHIOAAABAklEQVR42u3YMQrCQBAF0BzDQm0C1h7CE3hHL2WXLhAQb6CtBCKIhJnsvGK6LZL/smz+dpfT7vU51/Ph66y1fhrvq85w60Nn6b07AAAAAAgEiAp8vr4KwDwfAAAAAMgEEHUotw6wlA8AAG0B9Mf9TwMgGkARAwAAAACHsCIGAACA/4sWgK0DtFrEoj+w8lcRAAAASAlQpYhlCRwAAAAAMgFkKWJV1wMAAEBAmQAEWLQJAxAQgJIAAtGEAQgIQF0AgWjCAAQEAIBANGEAAgLgLkiAmjCAiAd6PoaUA6B1gCxbNitAmSYMAAAAAIG/aVsBaLYJAwAAoCSAIqYJAwAAoCzAGxK0OVeFG2KxAAAAAElFTkSuQmCC' | base64 -d > src/main/resources/assets/peaksandtalons/textures/entity/eagle.png
       - name: Build mod
         run: gradle build --stacktrace
+      - name: Verify Eagle texture packaged
+        run: jar tf build/libs/*.jar | grep 'assets/peaksandtalons/textures/entity/eagle.png'
       - name: Upload mod jar
         if: success()
         uses: actions/upload-artifact@v4
         with:
-          name: peaksandtalons-full-eagle-jar
+          name: peaksandtalons-final-v4
           path: build/libs/*.jar
