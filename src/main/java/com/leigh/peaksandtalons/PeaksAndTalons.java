@@ -1,5 +1,6 @@
 package com.leigh.peaksandtalons;
 
+import com.leigh.peaksandtalons.registry.ModCreativeTab;
 import com.leigh.peaksandtalons.registry.ModEntities;
 import com.leigh.peaksandtalons.registry.ModItems;
 import net.neoforged.bus.api.IEventBus;
@@ -12,5 +13,6 @@ public final class PeaksAndTalons {
     public PeaksAndTalons(IEventBus modEventBus) {
         ModItems.ITEMS.register(modEventBus);
         ModEntities.ENTITIES.register(modEventBus);
+        ModCreativeTab.TABS.register(modEventBus);
     }
 }
