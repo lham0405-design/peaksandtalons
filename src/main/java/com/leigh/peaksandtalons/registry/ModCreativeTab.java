@@ -15,6 +15,7 @@ public final class ModCreativeTab {
         .title(Component.translatable("itemGroup.peaksandtalons"))
         .icon(() -> new ItemStack(ModItems.EYE_OF_THE_EAGLE.get()))
         .displayItems((parameters, output) -> {
+            output.accept(ModItems.EAGLE_SPAWN_EGG.get());
             output.accept(ModItems.IRON_CHAIN.get());
             output.accept(ModItems.GOLD_CHAIN.get());
             output.accept(ModItems.NETHERITE_CHAIN.get());
