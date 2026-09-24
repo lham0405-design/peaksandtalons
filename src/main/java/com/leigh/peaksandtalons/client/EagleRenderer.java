@@ -9,7 +9,7 @@ import net.minecraft.resources.ResourceLocation;
 
 public class EagleRenderer extends MobRenderer<EagleEntity,EagleModel>{
  private static final ResourceLocation TEXTURE=ResourceLocation.fromNamespaceAndPath(PeaksAndTalons.MOD_ID,"textures/entity/eagle.png");
- public EagleRenderer(EntityRendererProvider.Context c){super(c,new EagleModel(c.bakeLayer(EagleModel.LAYER_LOCATION)),.90F);}
- @Override protected void scale(EagleEntity e,PoseStack p,float pt){p.scale(1.38F,1.38F,1.38F);}
+ public EagleRenderer(EntityRendererProvider.Context c){super(c,new EagleModel(c.bakeLayer(EagleModel.LAYER_LOCATION)),1.15F);}
+ @Override protected void scale(EagleEntity e,PoseStack p,float pt){p.scale(1.78F,1.78F,1.78F);}
  @Override public ResourceLocation getTextureLocation(EagleEntity e){return TEXTURE;}
 }
