@@ -2,7 +2,7 @@ name: Build
 
 on:
   push:
-    branches: [ main, playable-alpha, full-eagle-build ]
+    branches: [ main, playable-alpha, full-eagle-build, ftb-progression ]
   pull_request:
     branches: [ main ]
   workflow_dispatch:
@@ -31,9 +31,9 @@ jobs:
         run: gradle build --stacktrace
       - name: Verify Eagle texture packaged
         run: jar tf build/libs/*.jar | grep 'assets/peaksandtalons/textures/entity/eagle.png'
-      - name: Upload mod jar
+      - name: Upload progression playtest
         if: success()
         uses: actions/upload-artifact@v4
         with:
-          name: peaksandtalons-final-v4
+          name: peaksandtalons-progression-playtest
           path: build/libs/*.jar
