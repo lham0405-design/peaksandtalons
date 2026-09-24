@@ -1,0 +1,15 @@
+{
+ filename:"B100000000000003"
+ group:"A100000000000001"
+ id:"B100000000000003"
+ icon:{id:"peaksandtalons:eye_of_the_summit"}
+ order_index:2
+ images:[]
+ quests:[
+  {id:"C300000000000001" x:0.0d y:0.0d icon:{id:"peaksandtalons:eye_of_the_eagle"} tasks:[{id:"D300000000000001" type:"item" item:{count:1,id:"peaksandtalons:eye_of_the_eagle"}}]}
+  {id:"C300000000000002" x:-3.0d y:2.5d dependencies:["C300000000000001"] icon:{id:"peaksandtalons:storm_crystal"} tasks:[{id:"D300000000000002" type:"item" item:{count:1,id:"peaksandtalons:storm_crystal"}}]}
+  {id:"C300000000000003" x:3.0d y:2.5d dependencies:["C300000000000001"] icon:{id:"peaksandtalons:ancient_talon"} tasks:[{id:"D300000000000003" type:"item" item:{count:1,id:"peaksandtalons:ancient_talon"}}]}
+  {id:"C300000000000004" x:0.0d y:5.0d dependencies:["C300000000000002","C300000000000003"] icon:{id:"peaksandtalons:eye_of_the_summit"} tasks:[{id:"D300000000000004" type:"item" item:{count:1,id:"peaksandtalons:eye_of_the_summit"}}]}
+  {id:"C300000000000005" x:0.0d y:8.0d dependencies:["C300000000000004"] icon:{id:"peaksandtalons:golden_eagle_harness"} tasks:[{id:"D300000000000005" type:"item" item:{count:1,id:"peaksandtalons:golden_eagle_harness"}}]}
+ ]
+}
