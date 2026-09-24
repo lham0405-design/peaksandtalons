@@ -14,8 +14,10 @@ public final class ModEntities {
 
     public static final DeferredHolder<EntityType<?>, EntityType<EagleEntity>> EAGLE = ENTITIES.register("eagle", () ->
         EntityType.Builder.of(EagleEntity::new, MobCategory.CREATURE)
-            .sized(1.3f, 1.1f)
-            .clientTrackingRange(10)
+            // The eagle is intentionally boss-scale. Keep the interaction/combat volume
+            // close to the rendered bird so airborne hits register on the bird itself.
+            .sized(2.65f, 2.15f)
+            .clientTrackingRange(12)
             .build("eagle"));
 
     private ModEntities() {}
