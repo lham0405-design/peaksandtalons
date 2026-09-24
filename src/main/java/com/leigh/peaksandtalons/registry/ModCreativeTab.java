@@ -21,6 +21,14 @@ public final class ModCreativeTab {
             output.accept(ModItems.NETHERITE_CHAIN.get());
             output.accept(ModItems.REDSTONE_SOCKET.get());
             output.accept(ModItems.EYE_OF_THE_EAGLE.get());
+            output.accept(ModItems.EAGLE_FEATHER.get());
+            output.accept(ModItems.ANCIENT_TALON.get());
+            output.accept(ModItems.TALON_BLADE.get());
+            output.accept(ModItems.TALONSPIRE.get());
+            output.accept(ModItems.TALONTEER.get());
+            output.accept(ModItems.STORM_CRYSTAL.get());
+            output.accept(ModItems.EYE_OF_THE_SUMMIT.get());
+            output.accept(ModItems.GOLDEN_EAGLE_HARNESS.get());
             output.accept(ModItems.DRAGONS_EGG_SOCKET.get());
             ModItems.NECKLACES.values().forEach(item -> output.accept(item.get()));
         }).build());
