@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [{"type":"minecraft:item","name":"peaksandtalons:eagle_talon"}],
+      "functions": [{"function":"minecraft:set_count","count":{"type":"minecraft:uniform","min":1.0,"max":2.0}}]
+    },
+    {
+      "rolls": 1,
+      "entries": [{"type":"minecraft:item","name":"peaksandtalons:eagle_feather"}],
+      "functions": [{"function":"minecraft:set_count","count":{"type":"minecraft:uniform","min":1.0,"max":3.0}}]
+    }
+  ],
+  "random_sequence": "peaksandtalons:entities/eagle"
+}
