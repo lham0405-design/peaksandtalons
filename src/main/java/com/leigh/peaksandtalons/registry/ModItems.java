@@ -19,6 +19,7 @@ public final class ModItems {
     public static final DeferredItem<Item> REDSTONE_SOCKET = ITEMS.registerSimpleItem("redstone_socket");
     public static final DeferredItem<Item> EYE_OF_THE_EAGLE = ITEMS.registerSimpleItem("eye_of_the_eagle", new Item.Properties().rarity(Rarity.RARE));
     public static final DeferredItem<Item> EAGLE_FEATHER = ITEMS.registerSimpleItem("eagle_feather", new Item.Properties().rarity(Rarity.UNCOMMON));
+    public static final DeferredItem<Item> EAGLE_TALON = ITEMS.registerSimpleItem("eagle_talon", new Item.Properties().rarity(Rarity.UNCOMMON));
     public static final DeferredItem<Item> STORM_CRYSTAL = ITEMS.registerSimpleItem("storm_crystal", new Item.Properties().rarity(Rarity.RARE));
     public static final DeferredItem<Item> ANCIENT_TALON = ITEMS.registerSimpleItem("ancient_talon", new Item.Properties().rarity(Rarity.RARE));
     public static final DeferredItem<Item> TALON_BLADE = ITEMS.registerSimpleItem("talon_blade", new Item.Properties().rarity(Rarity.UNCOMMON));
