@@ -29,11 +29,40 @@ jobs:
           echo 'iVBORw0KGgoAAAANSUhEUgAAAGAAAABACAYAAADlNHIOAAABAklEQVR42u3YMQrCQBAF0BzDQm0C1h7CE3hHL2WXLhAQb6CtBCKIhJnsvGK6LZL/smz+dpfT7vU51/Ph66y1fhrvq85w60Nn6b07AAAAAAgEiAp8vr4KwDwfAAAAAMgEEHUotw6wlA8AAG0B9Mf9TwMgGkARAwAAAACHsCIGAACA/4sWgK0DtFrEoj+w8lcRAAAASAlQpYhlCRwAAAAAMgFkKWJV1wMAAEBAmQAEWLQJAxAQgJIAAtGEAQgIQF0AgWjCAAQEAIBANGEAAgLgLkiAmjCAiAd6PoaUA6B1gCxbNitAmSYMAAAAAIG/aVsBaLYJAwAAoCSAIqYJAwAAoCzAGxK0OVeFG2KxAAAAAElFTkSuQmCC' | base64 -d > src/main/resources/assets/peaksandtalons/textures/entity/eagle.png
       - name: Build mod
         run: gradle build --stacktrace
-      - name: Verify Eagle texture packaged
-        run: jar tf build/libs/*.jar | grep 'assets/peaksandtalons/textures/entity/eagle.png'
+      - name: Verify required playtest content
+        shell: bash
+        run: |
+          set -e
+          test -f config/ftbquests/quests/data.snbt
+          test -f config/ftbquests/quests/chapter_groups.snbt
+          test -f config/ftbquests/quests/chapters/B100000000000001.snbt
+          test -f config/ftbquests/quests/chapters/B100000000000002.snbt
+          test -f config/ftbquests/quests/lang/en_us.snbt
+          jar tf build/libs/*.jar | grep 'assets/peaksandtalons/textures/entity/eagle.png'
+      - name: Assemble modpack overlay
+        shell: bash
+        run: |
+          set -e
+          rm -rf playtest
+          mkdir -p playtest/mods playtest/config
+          cp build/libs/*.jar playtest/mods/
+          cp -R config/ftbquests playtest/config/
+          cat > playtest/INSTALL.txt <<'EOF'
+          PEAKS & TALONS PROGRESSION PLAYTEST
+
+          1. Completely close Minecraft.
+          2. Remove the older Peaks & Talons JAR from your instance mods folder.
+          3. Copy the contents of this ZIP into the ROOT of the Minecraft/CurseForge instance.
+             The mods folder merges with mods and config merges with config.
+          4. Keep FTB Quests, FTB Library and FTB Teams installed.
+          5. Launch the game and open FTB Quests.
+
+          IMPORTANT: Do not place this entire ZIP inside the mods folder. The config/ftbquests files
+          must be installed at the instance root so FTB Quests can load the quest chapters.
+          EOF
       - name: Upload progression playtest
         if: success()
         uses: actions/upload-artifact@v4
         with:
           name: peaksandtalons-progression-playtest
-          path: build/libs/*.jar
+          path: playtest/
