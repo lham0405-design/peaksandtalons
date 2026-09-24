@@ -22,11 +22,15 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.10.2'
-      - name: Generate packaged Eagle texture
+      - name: Generate packaged visual assets
         shell: bash
         run: |
-          mkdir -p src/main/resources/assets/peaksandtalons/textures/entity
+          mkdir -p src/main/resources/assets/peaksandtalons/textures/entity src/main/resources/assets/peaksandtalons/textures/item
           echo 'iVBORw0KGgoAAAANSUhEUgAAAGAAAABACAYAAADlNHIOAAABAklEQVR42u3YMQrCQBAF0BzDQm0C1h7CE3hHL2WXLhAQb6CtBCKIhJnsvGK6LZL/smz+dpfT7vU51/Ph66y1fhrvq85w60Nn6b07AAAAAAgEiAp8vr4KwDwfAAAAAMgEEHUotw6wlA8AAG0B9Mf9TwMgGkARAwAAAACHsCIGAACA/4sWgK0DtFrEoj+w8lcRAAAASAlQpYhlCRwAAAAAMgFkKWJV1wMAAEBAmQAEWLQJAxAQgJIAAtGEAQgIQF0AgWjCAAQEAIBANGEAAgLgLkiAmjCAiAd6PoaUA6B1gCxbNitAmSYMAAAAAIG/aVsBaLYJAwAAoCSAIqYJAwAAoCzAGxK0OVeFG2KxAAAAAElFTkSuQmCC' | base64 -d > src/main/resources/assets/peaksandtalons/textures/entity/eagle.png
+          echo 'iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABEklEQVR4nO2WQQqDMBBFx9J7uBHBrZfwMkJuIgRylG5cu3dbqN247x3S1UhMoyaZSQttPwgSJ8xj8scMwF+/rswnqKlzje/9OHvtYQHAxEqKZa0VkhXkEMBMbooL5BS7UUkBSorV8SQFKKpyE4QCsQvQj3OGpUYIFwgF4uwbeL/eViBb35IBmJVAYyJIUZWgpIBWSM3dptDUubbLi2vT0Gn9uCzPNHQvsUllQ0xDFwwR3YYAbpOGigSAsg0a0hVkAKwCpRNY1NR5lBdYjgAVUwVWAFSIGZMAhCgZQCuk11Xt/Svekzk3hPqAXIG9oSU5wFZy3/KTADiSkwBcCk0OwGRC7kn5UHgNu2aFtwF8JPFX6gmUy7FxHSg2mwAAAABJRU5ErkJggg==' | base64 -d > src/main/resources/assets/peaksandtalons/textures/item/eagle_talon.png
+          echo 'iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA6UlEQVR4nGNgGAWjgA7ASEPmv5GGzH9sckz0sHjJ9AxaWoPb8mv7W/5f29+C0/cMDDQKAVJ8TbMokNc0oZXR+IGRhsz/ry92wDG+4GdgoHIIGGnI/D98YA6c//D6GWoaT9hyZJ8TSnwwQJM0QIrPqeIA5KCHWR6TOYPh3I0njDR3AHq8k2I5xYDceEcGZIcAtVI8WQ7AZTk5QU+yA6hpOckOoLblJDkAvYKhhuVEOwBmOayCoZblRDuAgQGzdhtSeX1QW04wCmDx/fD6GZoEO04HIKd6utbr6I6ANS7pFu+4HDJglo8CWgMAl1vSdMU4LT8AAAAASUVORK5CYII=' | base64 -d > src/main/resources/assets/peaksandtalons/textures/item/talon_blade.png
+          echo 'iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABP0lEQVR4nGNgGAUjBajJS/5Xk5f8jy7ORC+Ll89MobVV2C0/u6P2/9kdtVh9z8BAhxBQUtPCK08zB6jJS/4/ub+PKEfQxPL395bDMa7gZ2CgQQgg+5yBgYHh3q1reNUzUtsB7+8th/v23q1rDJHpcxhuPXyO0x6qhgByUBNjOVUBKfGODKgSAqTGO1UdgM1yuga9+x2b/+53bP6/v7ccb4mHC1DkSvc7NiiW3Xe+S7LPyY4C5OwGA+QEO1kOgFm+gikbLrZT5QhZoUmyA9ALmrY7jgz3ne+SYzfpDkC3nIGBgeIUT7QD0Es5alhOtAPQ8zq1LCfKAbQuaPA6gB6lHIZBUTYKBEuyZUceUM0BNG8TEgIsuCQevfsHZ8sJ0c6dWINSTV7yvxg3K5x/5NojmtVsWL1Gt6oUlwPoCQbcAQBv7rrbd/2uIwAAAABJRU5ErkJggg==' | base64 -d > src/main/resources/assets/peaksandtalons/textures/item/talonspire.png
+          echo 'iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABBElEQVR4nO2VMQ6CQBBFP8YT2NGAhoTCM1Bp4RFM7PUMVtSeQXsTj0ChlT2dhZGoNHYewbUwECUsYZZZKORXBELemxnYAdq0+Ye4tilc2xR5zzp1gHfruU6MHB4GvggDX1o9oKkDlKrZBbLw6WKD8/1h1CZADasAtXpWARU4AHQ54JOL9/nKIxocYOhACgewdA7k90tZyuLaphjsnZ9713FUunqgQgeSma+ikTIcUOxA3kFDmft3yB3ghJMFuOFkgWyqwkkCqgcNi4AuOFDwF8y8vnSHA8D2eGMRaHwbFu6C+PlKr62eHtfCNnpDKx3D8RQbrm0KrtknIZXFDScL6Egr0Hjewm1779E/yfIAAAAASUVORK5CYII=' | base64 -d > src/main/resources/assets/peaksandtalons/textures/item/talonteer.png
       - name: Build mod
         run: gradle build --stacktrace
       - name: Verify progression and visual content
@@ -36,18 +40,18 @@ jobs:
           test -f config/ftbquests/quests/data.snbt
           test -f config/ftbquests/quests/chapter_groups.snbt
           test -f config/ftbquests/quests/lang/en_us.snbt
-          for chapter in B100000000000001 B100000000000002 B100000000000003 B100000000000004; do
-            test -f "config/ftbquests/quests/chapters/${chapter}.snbt"
-          done
+          for chapter in B100000000000001 B100000000000002 B100000000000003 B100000000000004 B200000000000001; do test -f "config/ftbquests/quests/chapters/${chapter}.snbt"; done
           grep -q 'max_completable_dependents:1' config/ftbquests/quests/chapters/B100000000000002.snbt
-          grep -q 'peaksandtalons:eagle/hunter_path' config/ftbquests/quests/chapters/B100000000000002.snbt
-          grep -q 'peaksandtalons:eagle/bond_path' config/ftbquests/quests/chapters/B100000000000002.snbt
           JAR=$(find build/libs -maxdepth 1 -name '*.jar' ! -name '*sources*' ! -name '*javadoc*' | head -n 1)
           test -n "$JAR"
           jar tf "$JAR" | grep -q 'assets/peaksandtalons/textures/entity/eagle.png'
-          for item in storm_crystal ancient_talon eye_of_the_summit golden_eagle_harness; do
-            jar tf "$JAR" | grep -q "assets/peaksandtalons/items/${item}.json\|assets/peaksandtalons/models/item/${item}.json"
+          for item in eagle_talon talon_blade talonspire talonteer; do
+            jar tf "$JAR" | grep -q "assets/peaksandtalons/models/item/${item}.json"
+            jar tf "$JAR" | grep -q "assets/peaksandtalons/textures/item/${item}.png"
           done
+          jar tf "$JAR" | grep -q 'data/peaksandtalons/recipe/talonspire.json'
+          jar tf "$JAR" | grep -q 'data/peaksandtalons/recipe/talonteer.json'
+          jar tf "$JAR" | grep -q 'data/peaksandtalons/recipe/talon_blade.json'
       - name: Assemble modpack overlay
         shell: bash
         run: |
@@ -59,17 +63,8 @@ jobs:
           cp -R config/ftbquests playtest/config/
           cat > playtest/INSTALL.txt <<'EOF'
           PEAKS & TALONS PROGRESSION PLAYTEST
-
-          1. Completely close Minecraft.
-          2. Remove the older Peaks & Talons JAR from your instance mods folder.
-          3. Copy the contents of this ZIP into the ROOT of the Minecraft/CurseForge instance.
-             The mods folder merges with mods and config merges with config.
-          4. Keep FTB Quests, FTB Library and FTB Teams installed.
-          5. Iris/Sodium, shaders and Jade are compatible-target utility/visual mods and are not required by Peaks & Talons progression.
-          6. Launch the game and open FTB Quests.
-
-          IMPORTANT: Do not place this entire ZIP inside the mods folder. The config/ftbquests files
-          must be installed at the instance root so FTB Quests can load the quest chapters.
+          Extract this ZIP into the ROOT of the Minecraft/CurseForge instance, merging mods/ and config/.
+          Keep FTB Quests, FTB Library and FTB Teams installed. Create 6.0.10 is part of the intended progression environment.
           EOF
       - name: Upload progression playtest
         if: success()
