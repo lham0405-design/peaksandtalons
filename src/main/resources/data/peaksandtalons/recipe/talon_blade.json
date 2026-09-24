@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": { "item": "peaksandtalons:ancient_talon" },
+  "result": { "id": "peaksandtalons:talon_blade", "count": 1 },
+  "experience": 0.35,
+  "cookingtime": 200
+}
