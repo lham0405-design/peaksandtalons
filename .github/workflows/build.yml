@@ -29,23 +29,33 @@ jobs:
           echo 'iVBORw0KGgoAAAANSUhEUgAAAGAAAABACAYAAADlNHIOAAABAklEQVR42u3YMQrCQBAF0BzDQm0C1h7CE3hHL2WXLhAQb6CtBCKIhJnsvGK6LZL/smz+dpfT7vU51/Ph66y1fhrvq85w60Nn6b07AAAAAAgEiAp8vr4KwDwfAAAAAMgEEHUotw6wlA8AAG0B9Mf9TwMgGkARAwAAAACHsCIGAACA/4sWgK0DtFrEoj+w8lcRAAAASAlQpYhlCRwAAAAAMgFkKWJV1wMAAEBAmQAEWLQJAxAQgJIAAtGEAQgIQF0AgWjCAAQEAIBANGEAAgLgLkiAmjCAiAd6PoaUA6B1gCxbNitAmSYMAAAAAIG/aVsBaLYJAwAAoCSAIqYJAwAAoCzAGxK0OVeFG2KxAAAAAElFTkSuQmCC' | base64 -d > src/main/resources/assets/peaksandtalons/textures/entity/eagle.png
       - name: Build mod
         run: gradle build --stacktrace
-      - name: Verify required playtest content
+      - name: Verify progression and visual content
         shell: bash
         run: |
-          set -e
+          set -euo pipefail
           test -f config/ftbquests/quests/data.snbt
           test -f config/ftbquests/quests/chapter_groups.snbt
-          test -f config/ftbquests/quests/chapters/B100000000000001.snbt
-          test -f config/ftbquests/quests/chapters/B100000000000002.snbt
           test -f config/ftbquests/quests/lang/en_us.snbt
-          jar tf build/libs/*.jar | grep 'assets/peaksandtalons/textures/entity/eagle.png'
+          for chapter in B100000000000001 B100000000000002 B100000000000003 B100000000000004; do
+            test -f "config/ftbquests/quests/chapters/${chapter}.snbt"
+          done
+          grep -q 'max_completable_dependents:1' config/ftbquests/quests/chapters/B100000000000002.snbt
+          grep -q 'peaksandtalons:eagle/hunter_path' config/ftbquests/quests/chapters/B100000000000002.snbt
+          grep -q 'peaksandtalons:eagle/bond_path' config/ftbquests/quests/chapters/B100000000000002.snbt
+          JAR=$(find build/libs -maxdepth 1 -name '*.jar' ! -name '*sources*' ! -name '*javadoc*' | head -n 1)
+          test -n "$JAR"
+          jar tf "$JAR" | grep -q 'assets/peaksandtalons/textures/entity/eagle.png'
+          for item in storm_crystal ancient_talon eye_of_the_summit golden_eagle_harness; do
+            jar tf "$JAR" | grep -q "assets/peaksandtalons/items/${item}.json\|assets/peaksandtalons/models/item/${item}.json"
+          done
       - name: Assemble modpack overlay
         shell: bash
         run: |
-          set -e
+          set -euo pipefail
           rm -rf playtest
           mkdir -p playtest/mods playtest/config
-          cp build/libs/*.jar playtest/mods/
+          JAR=$(find build/libs -maxdepth 1 -name '*.jar' ! -name '*sources*' ! -name '*javadoc*' | head -n 1)
+          cp "$JAR" playtest/mods/
           cp -R config/ftbquests playtest/config/
           cat > playtest/INSTALL.txt <<'EOF'
           PEAKS & TALONS PROGRESSION PLAYTEST
@@ -55,7 +65,8 @@ jobs:
           3. Copy the contents of this ZIP into the ROOT of the Minecraft/CurseForge instance.
              The mods folder merges with mods and config merges with config.
           4. Keep FTB Quests, FTB Library and FTB Teams installed.
-          5. Launch the game and open FTB Quests.
+          5. Iris/Sodium, shaders and Jade are compatible-target utility/visual mods and are not required by Peaks & Talons progression.
+          6. Launch the game and open FTB Quests.
 
           IMPORTANT: Do not place this entire ZIP inside the mods folder. The config/ftbquests files
           must be installed at the instance root so FTB Quests can load the quest chapters.
