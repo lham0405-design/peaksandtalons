@@ -1,32 +1,86 @@
 {
-	chapter_group.A100000000000001.title:"Peaks & Talons"
-	chapter_group.A100000000000002.title:"The High Peaks"
-	chapter.B100000000000001.title:"The Journey Begins"
-	chapter.B100000000000002.title:"Lord of the Skies"
-	quest.C100000000000001.title:"A Place to Begin"
-	quest.C100000000000001.quest_desc:["Build the basics. The paths ahead are optional preparation for the greater adventure."]
-	quest.C100000000000002.title:"Gearing Up"
-	quest.C100000000000002.quest_desc:["Armor matters. The creatures of the peaks will not treat an unprepared traveler kindly."]
-	quest.C100000000000003.title:"Hold the Line"
-	quest.C100000000000003.quest_desc:["A shield is useful preparation before seeking dangerous wildlife."]
-	quest.C100000000000004.title:"Food for the Road"
-	quest.C100000000000004.quest_desc:["Carry a dependable food supply before traveling far from home."]
-	quest.C100000000000005.title:"A Better Meal"
-	quest.C100000000000005.quest_desc:["Farmer's Delight expands your kitchen. Learn to prepare meals worthy of a long expedition."]
-	quest.C100000000000006.title:"Faster Smelting"
-	quest.C100000000000006.quest_desc:["Iron Furnaces is useful support progression, not a requirement of the Peaks & Talons story."]
-	quest.C100000000000007.title:"Village Life Made Easy"
-	quest.C100000000000007.quest_desc:["Easy Villagers can streamline your settlement while you prepare for larger adventures."]
-	quest.C200000000000001.title:"A Choice Beneath the Wings"
-	quest.C200000000000001.quest_desc:["You have reached a defining choice. The Eagle can become your greatest quarry or your greatest companion — but not both. Completing either Path of the Hunter or Path of the Bond permanently closes the other branch for this progression. Read both paths before acting.","HUNTER: Damage the Eagle and commit to its boss encounter. BOND: Do not harm the Eagle; approach with salmon and endure its difficult taming trials."]
-	quest.C200000000000002.title:"Path of the Hunter — Commit to Battle"
-	quest.C200000000000002.quest_desc:["WARNING — EXCLUSIVE CHOICE: Beginning the Hunter path means you have chosen to fight the Eagle. Once this branch is completed, Path of the Bond becomes unavailable.","Strike the Eagle and prepare for a boss battle. Defeating the first Eagle will unleash the storm-born Vengeance phase."]
-	quest.C200000000000003.title:"Vengeance"
-	quest.C200000000000003.quest_desc:["The sky answers your challenge. Rain, thunder and lightning herald the second phase as three enraged Eagles descend. Defeat the Vengeance encounter to complete the Hunter route."]
-	quest.C200000000000004.title:"Path of the Bond — Earn Its Trust"
-	quest.C200000000000004.quest_desc:["WARNING — EXCLUSIVE CHOICE: The Bond path is for players who choose not to fight the Eagle. Do not damage it. Once this branch is completed, Path of the Hunter becomes unavailable.","Offer salmon peacefully. Acceptance only grants you the chance to attempt the true taming trial — it does not tame the Eagle immediately."]
-	quest.C200000000000005.title:"Survive the Taming Trial"
-	quest.C200000000000005.quest_desc:["Mount the untamed Eagle and hold on. It may climb, dive, buck, take to the air and throw you from dangerous heights. Multiple attempts may be required before this boss-class creature accepts you."]
-	quest.C200000000000006.title:"Take to the Skies"
-	quest.C200000000000006.quest_desc:["Your bond is complete. Equip your Eagle for riding and complete your first controlled flight. You chose companionship over the Hunter rewards — and gained a majestic flying ally instead."]
+ chapter_group.A100000000000001.title:"Peaks & Talons"
+ chapter_group.A100000000000002.title:"Create Engineering"
+ chapter.B100000000000001.title:"The Journey Begins"
+ chapter.B100000000000002.title:"Lord of the Skies"
+ chapter.B100000000000003.title:"Relics of the Summit"
+ chapter.B100000000000004.title:"Mastery of the Peaks"
+ chapter.B200000000000001.title:"Create: Engineer's Path"
+
+ quest.C100000000000001.title:"A Place to Begin"
+ quest.C100000000000001.quest_desc:["Craft the foundation of your adventure. Preparation matters before you challenge the high peaks."]
+ quest.C100000000000002.title:"Gearing Up"
+ quest.C100000000000002.quest_desc:["Armor matters. The creatures of the peaks will not treat an unprepared traveler kindly."]
+ quest.C100000000000003.title:"Hold the Line"
+ quest.C100000000000003.quest_desc:["Carry a shield before seeking dangerous wildlife."]
+ quest.C100000000000004.title:"Food for the Road"
+ quest.C100000000000004.quest_desc:["Carry a dependable food supply before traveling far from home."]
+ quest.C100000000000005.title:"A Better Meal"
+ quest.C100000000000005.quest_desc:["Farmer's Delight expands your kitchen for longer expeditions."]
+ quest.C100000000000006.title:"Faster Smelting"
+ quest.C100000000000006.quest_desc:["Iron Furnaces is useful support progression while you prepare for the peaks."]
+ quest.C100000000000007.title:"Village Life Made Easy"
+ quest.C100000000000007.quest_desc:["Easy Villagers can streamline your settlement while you prepare for larger adventures."]
+
+ quest.C200000000000001.title:"A Choice Beneath the Wings"
+ quest.C200000000000001.quest_desc:["A defining choice awaits. The Eagle can become your greatest quarry or your greatest companion. Read both routes before acting.","HUNTER: challenge the Eagle and survive Vengeance. BOND: do not harm it; offer salmon and endure the taming trials."]
+ quest.C200000000000002.title:"Path of the Hunter"
+ quest.C200000000000002.quest_desc:["Commit to battle. Defeating the first Eagle unleashes the storm-born Vengeance phase."]
+ quest.C200000000000003.title:"Vengeance"
+ quest.C200000000000003.quest_desc:["Rain, thunder and lightning herald the second phase as three enraged Eagles descend. They are faster and far more aggressive than the first."]
+ quest.C200000000000004.title:"Path of the Bond"
+ quest.C200000000000004.quest_desc:["Do not damage the Eagle. Offer salmon peacefully. Hearts mean it has accepted your offering and will allow a taming attempt."]
+ quest.C200000000000005.title:"Survive the Taming Trial"
+ quest.C200000000000005.quest_desc:["Mount with an empty hand and hold on through climbs, dives and bucks. Earn its trust across the trials rather than instantly taming it."]
+ quest.C200000000000006.title:"Take to the Skies"
+ quest.C200000000000006.quest_desc:["Your bond is complete. Equip the Eagle and take your first controlled flight."]
+
+ quest.C300000000000001.title:"Eye of the Eagle"
+ quest.C300000000000001.quest_desc:["A rare relic tied to the Eagle and the path toward the summit."]
+ quest.C300000000000002.title:"Storm Crystal"
+ quest.C300000000000002.quest_desc:["Capture the fury of the storm in crystalline form."]
+ quest.C300000000000003.title:"Ancient Talon"
+ quest.C300000000000003.quest_desc:["Recover an ancient talon, a relic from the oldest rulers of the peaks."]
+ quest.C300000000000004.title:"Eye of the Summit"
+ quest.C300000000000004.quest_desc:["Unite the relics of Eagle and storm to advance deeper into the summit progression."]
+ quest.C300000000000005.title:"Golden Eagle Harness"
+ quest.C300000000000005.quest_desc:["Craft the ceremonial golden harness worthy of a fully bonded Eagle."]
+
+ quest.C400000000000001.title:"Summit-Bound"
+ quest.C400000000000001.quest_desc:["Possess the Eye of the Summit and begin the final mastery path."]
+ quest.C400000000000002.title:"Harness of the High Peaks"
+ quest.C400000000000002.quest_desc:["Complete the Golden Eagle Harness."]
+ quest.C400000000000003.title:"Feathers of the Sky"
+ quest.C400000000000003.quest_desc:["Gather Eagle Feathers. They can substitute for ordinary feathers in appropriate crafting recipes."]
+ quest.C400000000000004.title:"Master of the Peaks"
+ quest.C400000000000004.quest_desc:["A final trophy marking mastery of this stage of Peaks & Talons."]
+
+ quest.E200000000000001.title:"Andesite Beginnings"
+ quest.E200000000000001.quest_desc:["Create begins with Andesite Alloy. This is the foundation for your first machines."]
+ quest.E200000000000002.title:"Gears in Motion"
+ quest.E200000000000002.quest_desc:["Craft Cogwheels and learn how rotational power is transferred."]
+ quest.E200000000000003.title:"Power from Water"
+ quest.E200000000000003.quest_desc:["Build a Water Wheel to establish dependable rotational power."]
+ quest.E200000000000004.title:"The Millstone"
+ quest.E200000000000004.quest_desc:["Use rotational force to grind materials with a Millstone."]
+ quest.E200000000000005.title:"Mechanical Press"
+ quest.E200000000000005.quest_desc:["The Mechanical Press opens the door to automated shaping and compacting."]
+ quest.E200000000000006.title:"Depot Processing"
+ quest.E200000000000006.quest_desc:["A Depot provides a simple work surface for Create processing."]
+ quest.E200000000000007.title:"Encased Fan"
+ quest.E200000000000007.quest_desc:["The Encased Fan is the heart of Create's bulk processing systems."]
+ quest.E200000000000008.title:"Bulk Washing"
+ quest.E200000000000008.quest_desc:["Pass fan-driven air through water to wash materials in bulk."]
+ quest.E200000000000009.title:"Bulk Smoking"
+ quest.E200000000000009.quest_desc:["Pass fan-driven air through a Campfire to smoke items in bulk."]
+ quest.E20000000000000A.title:"Bulk Haunting"
+ quest.E20000000000000A.quest_desc:["Pass fan-driven air through Soul Fire to haunt and transform materials."]
+ quest.E20000000000000B.title:"Bulk Smelting"
+ quest.E20000000000000B.quest_desc:["Pass fan-driven air through Lava to create a bulk smelter. Peaks & Talons requires this process to forge an Eagle Talon into a Talon Blade."]
+ quest.E20000000000000C.title:"Forge the Talon Blade"
+ quest.E20000000000000C.quest_desc:["Use your bulk smelter to forge the Eagle Talon. The resulting Talon Blade is the basis of Talon weaponry."]
+ quest.E20000000000000D.title:"Precision Engineering"
+ quest.E20000000000000D.quest_desc:["Create a Precision Mechanism and enter Create's advanced engineering tier."]
+ quest.E20000000000000E.title:"Mechanical Crafters"
+ quest.E20000000000000E.quest_desc:["Build a Mechanical Crafter array. Legendary Peaks & Talons necklaces require machinery beyond an ordinary crafting table."]
 }
