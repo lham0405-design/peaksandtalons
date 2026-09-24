@@ -17,16 +17,16 @@
 	quest.C100000000000006.quest_desc:["Iron Furnaces is useful support progression, not a requirement of the Peaks & Talons story."]
 	quest.C100000000000007.title:"Village Life Made Easy"
 	quest.C100000000000007.quest_desc:["Easy Villagers can streamline your settlement while you prepare for larger adventures."]
-	quest.C200000000000001.title:"A Feather on the Wind"
-	quest.C200000000000001.quest_desc:["Evidence of something powerful overhead. From here, you must eventually choose how you face the Eagle."]
-	quest.C200000000000002.title:"Path of the Hunter"
-	quest.C200000000000002.quest_desc:["Strike the Eagle and commit to battle. This choice closes the Bond path for this encounter."]
+	quest.C200000000000001.title:"A Choice Beneath the Wings"
+	quest.C200000000000001.quest_desc:["You have reached a defining choice. The Eagle can become your greatest quarry or your greatest companion — but not both. Completing either Path of the Hunter or Path of the Bond permanently closes the other branch for this progression. Read both paths before acting.","HUNTER: Damage the Eagle and commit to its boss encounter. BOND: Do not harm the Eagle; approach with salmon and endure its difficult taming trials."]
+	quest.C200000000000002.title:"Path of the Hunter — Commit to Battle"
+	quest.C200000000000002.quest_desc:["WARNING — EXCLUSIVE CHOICE: Beginning the Hunter path means you have chosen to fight the Eagle. Once this branch is completed, Path of the Bond becomes unavailable.","Strike the Eagle and prepare for a boss battle. Defeating the first Eagle will unleash the storm-born Vengeance phase."]
 	quest.C200000000000003.title:"Vengeance"
-	quest.C200000000000003.quest_desc:["Defeat the storm-born second phase and its three enraged Eagles."]
-	quest.C200000000000004.title:"Path of the Bond"
-	quest.C200000000000004.quest_desc:["Offer salmon without harming the Eagle. Earning permission to mount it is only the beginning."]
-	quest.C200000000000005.title:"Earn Its Trust"
-	quest.C200000000000005.quest_desc:["Survive the Eagle's aerial taming attempts until it finally accepts you."]
+	quest.C200000000000003.quest_desc:["The sky answers your challenge. Rain, thunder and lightning herald the second phase as three enraged Eagles descend. Defeat the Vengeance encounter to complete the Hunter route."]
+	quest.C200000000000004.title:"Path of the Bond — Earn Its Trust"
+	quest.C200000000000004.quest_desc:["WARNING — EXCLUSIVE CHOICE: The Bond path is for players who choose not to fight the Eagle. Do not damage it. Once this branch is completed, Path of the Hunter becomes unavailable.","Offer salmon peacefully. Acceptance only grants you the chance to attempt the true taming trial — it does not tame the Eagle immediately."]
+	quest.C200000000000005.title:"Survive the Taming Trial"
+	quest.C200000000000005.quest_desc:["Mount the untamed Eagle and hold on. It may climb, dive, buck, take to the air and throw you from dangerous heights. Multiple attempts may be required before this boss-class creature accepts you."]
 	quest.C200000000000006.title:"Take to the Skies"
-	quest.C200000000000006.quest_desc:["Saddle your bonded Eagle and complete your first true flight."]
+	quest.C200000000000006.quest_desc:["Your bond is complete. Equip your Eagle for riding and complete your first controlled flight. You chose companionship over the Hunter rewards — and gained a majestic flying ally instead."]
 }
