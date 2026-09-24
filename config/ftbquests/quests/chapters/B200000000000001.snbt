@@ -4,12 +4,7 @@
  id:"B200000000000001"
  icon:{id:"create:mechanical_crafter"}
  order_index:0
- images:[
-  {image:"create:textures/item/wrench.png" x:-7.5d y:1.0d width:2.5d height:2.5d order:-1}
-  {image:"create:textures/block/water_wheel.png" x:6.5d y:3.0d width:3.0d height:3.0d order:-1}
-  {image:"create:textures/block/encased_fan.png" x:-7.0d y:11.0d width:3.0d height:3.0d order:-1}
-  {image:"create:textures/block/mechanical_crafter.png" x:6.5d y:20.0d width:3.0d height:3.0d order:-1}
- ]
+ images:[]
  quests:[
   {id:"E200000000000001" x:0.0d y:0.0d icon:{id:"create:andesite_alloy"} tasks:[{id:"F200000000000001" type:"item" item:{count:8,id:"create:andesite_alloy"}}] rewards:[{id:"A200000000000001" type:"xp" xp:100},{id:"A200000000000002" type:"item" item:{count:8,id:"create:shaft"}}]}
   {id:"E200000000000002" x:-2.5d y:2.5d dependencies:["E200000000000001"] icon:{id:"create:cogwheel"} tasks:[{id:"F200000000000002" type:"item" item:{count:4,id:"create:cogwheel"}}] rewards:[{id:"A200000000000003" type:"xp" xp:100},{id:"A200000000000004" type:"item" item:{count:2,id:"create:large_cogwheel"}}]}
