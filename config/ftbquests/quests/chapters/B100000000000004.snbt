@@ -1,0 +1,14 @@
+{
+ filename:"B100000000000004"
+ group:"A100000000000001"
+ id:"B100000000000004"
+ icon:{id:"minecraft:nether_star"}
+ order_index:3
+ images:[]
+ quests:[
+  {id:"C400000000000001" x:0.0d y:0.0d icon:{id:"peaksandtalons:eye_of_the_summit"} tasks:[{id:"D400000000000001" type:"item" item:{count:1,id:"peaksandtalons:eye_of_the_summit"}}]}
+  {id:"C400000000000002" x:-3.0d y:3.0d dependencies:["C400000000000001"] icon:{id:"peaksandtalons:golden_eagle_harness"} tasks:[{id:"D400000000000002" type:"item" item:{count:1,id:"peaksandtalons:golden_eagle_harness"}}]}
+  {id:"C400000000000003" x:3.0d y:3.0d dependencies:["C400000000000001"] icon:{id:"peaksandtalons:eagle_feather"} tasks:[{id:"D400000000000003" type:"item" item:{count:8,id:"peaksandtalons:eagle_feather"}}]}
+  {id:"C400000000000004" x:0.0d y:6.0d dependencies:["C400000000000002","C400000000000003"] icon:{id:"minecraft:nether_star"} tasks:[{id:"D400000000000004" type:"item" item:{count:1,id:"minecraft:nether_star"}}]}
+ ]
+}
