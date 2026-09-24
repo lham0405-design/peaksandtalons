@@ -1,0 +1,16 @@
+{
+ filename:"B200000000000001"
+ group:"A100000000000002"
+ id:"B200000000000001"
+ icon:{id:"create:mechanical_crafter"}
+ order_index:0
+ images:[]
+ quests:[
+  {id:"E200000000000001" x:0.0d y:0.0d icon:{id:"create:andesite_alloy"} tasks:[{id:"F200000000000001" type:"item" item:{count:8,id:"create:andesite_alloy"}}] rewards:[{id:"R200000000000001" type:"xp" xp:100},{id:"R200000000000002" type:"item" item:{count:8,id:"create:shaft"}}]}
+  {id:"E200000000000002" x:0.0d y:2.5d dependencies:["E200000000000001"] icon:{id:"create:water_wheel"} tasks:[{id:"F200000000000002" type:"item" item:{count:1,id:"create:water_wheel"}}] rewards:[{id:"R200000000000003" type:"xp" xp:150},{id:"R200000000000004" type:"item" item:{count:4,id:"create:cogwheel"}}]}
+  {id:"E200000000000003" x:-2.5d y:5.0d dependencies:["E200000000000002"] icon:{id:"create:mechanical_press"} tasks:[{id:"F200000000000003" type:"item" item:{count:1,id:"create:mechanical_press"}}] rewards:[{id:"R200000000000005" type:"xp" xp:200},{id:"R200000000000006" type:"item" item:{count:2,id:"create:andesite_casing"}}]}
+  {id:"E200000000000004" x:2.5d y:5.0d dependencies:["E200000000000002"] icon:{id:"create:depot"} tasks:[{id:"F200000000000004" type:"item" item:{count:1,id:"create:depot"}}] rewards:[{id:"R200000000000007" type:"xp" xp:175},{id:"R200000000000008" type:"item" item:{count:1,id:"create:wrench"}}]}
+  {id:"E200000000000005" x:0.0d y:7.5d dependencies:["E200000000000003","E200000000000004"] icon:{id:"create:precision_mechanism"} tasks:[{id:"F200000000000005" type:"item" item:{count:1,id:"create:precision_mechanism"}}] rewards:[{id:"R200000000000009" type:"xp" xp:300},{id:"R20000000000000A" type:"item" item:{count:4,id:"create:brass_ingot"}}]}
+  {id:"E200000000000006" x:0.0d y:10.0d dependencies:["E200000000000005"] icon:{id:"create:mechanical_crafter"} tasks:[{id:"F200000000000006" type:"item" item:{count:9,id:"create:mechanical_crafter"}}] rewards:[{id:"R20000000000000B" type:"xp" xp:500},{id:"R20000000000000C" type:"item" item:{count:16,id:"create:cogwheel"}}]}
+ ]
+}
