@@ -20,6 +20,8 @@ public final class ModItems {
     public static final DeferredItem<Item> EYE_OF_THE_EAGLE = ITEMS.registerSimpleItem("eye_of_the_eagle", new Item.Properties().rarity(Rarity.RARE));
     public static final DeferredItem<Item> EAGLE_FEATHER = ITEMS.registerSimpleItem("eagle_feather", new Item.Properties().rarity(Rarity.UNCOMMON));
     public static final DeferredItem<Item> EAGLE_TALON = ITEMS.registerSimpleItem("eagle_talon", new Item.Properties().rarity(Rarity.UNCOMMON));
+    public static final DeferredItem<Item> CRUSHED_TALON = ITEMS.registerSimpleItem("crushed_talon", new Item.Properties().rarity(Rarity.UNCOMMON));
+    public static final DeferredItem<Item> TALON_DUST = ITEMS.registerSimpleItem("talon_dust", new Item.Properties().rarity(Rarity.UNCOMMON));
     public static final DeferredItem<Item> STORM_CRYSTAL = ITEMS.registerSimpleItem("storm_crystal", new Item.Properties().rarity(Rarity.RARE));
     public static final DeferredItem<Item> ANCIENT_TALON = ITEMS.registerSimpleItem("ancient_talon", new Item.Properties().rarity(Rarity.RARE));
     public static final DeferredItem<Item> TALON_BLADE = ITEMS.registerSimpleItem("talon_blade", new Item.Properties().rarity(Rarity.UNCOMMON));
@@ -27,6 +29,7 @@ public final class ModItems {
     public static final DeferredItem<PoisonTalonWeaponItem> TALONTEER = ITEMS.registerItem("talonteer", p -> new PoisonTalonWeaponItem(Tiers.IRON, p.attributes(SwordItem.createAttributes(Tiers.IRON, 1, -1.8F)).rarity(Rarity.UNCOMMON)));
     public static final DeferredItem<Item> EYE_OF_THE_SUMMIT = ITEMS.registerSimpleItem("eye_of_the_summit", new Item.Properties().rarity(Rarity.EPIC));
     public static final DeferredItem<Item> GOLDEN_EAGLE_HARNESS = ITEMS.registerSimpleItem("golden_eagle_harness", new Item.Properties().rarity(Rarity.EPIC).stacksTo(1));
+    public static final DeferredItem<Item> TROLL_HEART = ITEMS.registerSimpleItem("troll_heart", new Item.Properties().rarity(Rarity.EPIC).stacksTo(1).fireResistant());
     public static final DeferredItem<Item> DRAGONS_EGG_SOCKET = ITEMS.registerSimpleItem("dragons_egg_socket", new Item.Properties().rarity(Rarity.EPIC));
     public static final DeferredItem<EagleSpawnEggItem> EAGLE_SPAWN_EGG = ITEMS.registerItem("eagle_spawn_egg", EagleSpawnEggItem::new);
     public static final Map<String, DeferredItem<NecklaceItem>> NECKLACES = new LinkedHashMap<>();
