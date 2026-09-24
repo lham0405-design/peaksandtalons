@@ -1,0 +1,16 @@
+{
+	filename:"B100000000000001"
+	group:"A100000000000001"
+	id:"B100000000000001"
+	icon:{id:"minecraft:crafting_table"}
+	order_index:0
+	quests:[
+		{id:"C100000000000001" x:0.0d y:0.0d icon:{id:"minecraft:crafting_table"} tasks:[{id:"D100000000000001" type:"item" item:{count:1,id:"minecraft:crafting_table"}}]}
+		{id:"C100000000000002" x:-3.0d y:2.0d dependencies:["C100000000000001"] icon:{id:"minecraft:iron_chestplate"} tasks:[{id:"D100000000000002" type:"item" item:{count:1,id:"minecraft:iron_chestplate"}}]}
+		{id:"C100000000000003" x:-3.0d y:4.0d dependencies:["C100000000000002"] icon:{id:"minecraft:shield"} tasks:[{id:"D100000000000003" type:"item" item:{count:1,id:"minecraft:shield"}}]}
+		{id:"C100000000000004" x:0.0d y:2.0d dependencies:["C100000000000001"] icon:{id:"minecraft:bread"} tasks:[{id:"D100000000000004" type:"item" item:{count:4,id:"minecraft:bread"}}]}
+		{id:"C100000000000005" x:0.0d y:4.0d dependencies:["C100000000000004"] icon:{id:"farmersdelight:cooking_pot"} tasks:[{id:"D100000000000005" type:"item" item:{count:1,id:"farmersdelight:cooking_pot"}}]}
+		{id:"C100000000000006" x:3.0d y:2.0d dependencies:["C100000000000001"] icon:{id:"ironfurnaces:iron_furnace"} tasks:[{id:"D100000000000006" type:"item" item:{count:1,id:"ironfurnaces:iron_furnace"}}]}
+		{id:"C100000000000007" x:5.5d y:2.0d dependencies:["C100000000000001"] icon:{id:"easy_villagers:trader"} tasks:[{id:"D100000000000007" type:"item" item:{count:1,id:"easy_villagers:trader"}}]}
+	]
+}

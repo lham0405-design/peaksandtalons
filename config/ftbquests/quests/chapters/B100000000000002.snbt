@@ -1,0 +1,15 @@
+{
+	filename:"B100000000000002"
+	group:"A100000000000001"
+	id:"B100000000000002"
+	icon:{id:"peaksandtalons:eagle_feather"}
+	order_index:1
+	quests:[
+		{id:"C200000000000001" x:0.0d y:0.0d icon:{id:"peaksandtalons:eagle_feather"} tasks:[{id:"D200000000000001" type:"item" item:{count:1,id:"peaksandtalons:eagle_feather"}}] max_completable_dependents:1}
+		{id:"C200000000000002" x:-3.0d y:2.0d dependencies:["C200000000000001"] icon:{id:"minecraft:iron_sword"} tasks:[{id:"D200000000000002" type:"advancement" advancement:"peaksandtalons:eagle/hunter_path"}]}
+		{id:"C200000000000003" x:-3.0d y:4.0d dependencies:["C200000000000002"] icon:{id:"peaksandtalons:eye_of_the_eagle"} tasks:[{id:"D200000000000003" type:"advancement" advancement:"peaksandtalons:eagle/vengeance_defeated"}]}
+		{id:"C200000000000004" x:3.0d y:2.0d dependencies:["C200000000000001"] icon:{id:"minecraft:salmon"} tasks:[{id:"D200000000000004" type:"advancement" advancement:"peaksandtalons:eagle/bond_path"}]}
+		{id:"C200000000000005" x:3.0d y:4.0d dependencies:["C200000000000004"] icon:{id:"minecraft:saddle"} tasks:[{id:"D200000000000005" type:"advancement" advancement:"peaksandtalons:eagle/tamed"}]}
+		{id:"C200000000000006" x:3.0d y:6.0d dependencies:["C200000000000005"] icon:{id:"minecraft:feather"} tasks:[{id:"D200000000000006" type:"advancement" advancement:"peaksandtalons:eagle/first_flight"}]}
+	]
+}

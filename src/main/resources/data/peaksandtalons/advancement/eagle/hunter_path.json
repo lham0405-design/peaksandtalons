@@ -1,0 +1,1 @@
+{"criteria":{"hurt_eagle":{"trigger":"minecraft:player_hurt_entity","conditions":{"entity":{"type":"peaksandtalons:eagle"}}}},"requirements":[["hurt_eagle"]],"sends_telemetry_event":false}

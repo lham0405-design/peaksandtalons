@@ -1,0 +1,32 @@
+{
+	chapter_group.A100000000000001.title:"Peaks & Talons"
+	chapter_group.A100000000000002.title:"The High Peaks"
+	chapter.B100000000000001.title:"The Journey Begins"
+	chapter.B100000000000002.title:"Lord of the Skies"
+	quest.C100000000000001.title:"A Place to Begin"
+	quest.C100000000000001.quest_desc:["Build the basics. The paths ahead are optional preparation for the greater adventure."]
+	quest.C100000000000002.title:"Gearing Up"
+	quest.C100000000000002.quest_desc:["Armor matters. The creatures of the peaks will not treat an unprepared traveler kindly."]
+	quest.C100000000000003.title:"Hold the Line"
+	quest.C100000000000003.quest_desc:["A shield is useful preparation before seeking dangerous wildlife."]
+	quest.C100000000000004.title:"Food for the Road"
+	quest.C100000000000004.quest_desc:["Carry a dependable food supply before traveling far from home."]
+	quest.C100000000000005.title:"A Better Meal"
+	quest.C100000000000005.quest_desc:["Farmer's Delight expands your kitchen. Learn to prepare meals worthy of a long expedition."]
+	quest.C100000000000006.title:"Faster Smelting"
+	quest.C100000000000006.quest_desc:["Iron Furnaces is useful support progression, not a requirement of the Peaks & Talons story."]
+	quest.C100000000000007.title:"Village Life Made Easy"
+	quest.C100000000000007.quest_desc:["Easy Villagers can streamline your settlement while you prepare for larger adventures."]
+	quest.C200000000000001.title:"A Feather on the Wind"
+	quest.C200000000000001.quest_desc:["Evidence of something powerful overhead. From here, you must eventually choose how you face the Eagle."]
+	quest.C200000000000002.title:"Path of the Hunter"
+	quest.C200000000000002.quest_desc:["Strike the Eagle and commit to battle. This choice closes the Bond path for this encounter."]
+	quest.C200000000000003.title:"Vengeance"
+	quest.C200000000000003.quest_desc:["Defeat the storm-born second phase and its three enraged Eagles."]
+	quest.C200000000000004.title:"Path of the Bond"
+	quest.C200000000000004.quest_desc:["Offer salmon without harming the Eagle. Earning permission to mount it is only the beginning."]
+	quest.C200000000000005.title:"Earn Its Trust"
+	quest.C200000000000005.quest_desc:["Survive the Eagle's aerial taming attempts until it finally accepts you."]
+	quest.C200000000000006.title:"Take to the Skies"
+	quest.C200000000000006.quest_desc:["Saddle your bonded Eagle and complete your first true flight."]
+}

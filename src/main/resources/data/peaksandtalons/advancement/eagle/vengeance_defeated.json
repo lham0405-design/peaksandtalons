@@ -1,0 +1,1 @@
+{"criteria":{"eagle_kill":{"trigger":"minecraft:player_killed_entity","conditions":{"entity":{"type":"peaksandtalons:eagle"}}}},"requirements":[["eagle_kill"]],"sends_telemetry_event":false}
