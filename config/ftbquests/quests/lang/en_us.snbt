@@ -1,6 +1,7 @@
 {
  chapter_group.A100000000000001.title: "PEAKS & TALONS — STORY"
  chapter_group.A100000000000002.title: "CREATE ENGINEERING"
+ chapter_group.A100000000000003.title: "EXPEDITION SUPPORT"
  chapter.B100000000000001.title: "I — JOURNEY BEGINS"
  chapter.B100000000000001.chapter_subtitle: "Welcome • Gear & Progress • Food & Utility"
  chapter.B100000000000002.title: "II — LORD OF THE SKIES"
@@ -11,6 +12,20 @@
  chapter.B100000000000004.chapter_subtitle: "Mountain Threat • Orduk's Cave • Fallen Troll • Higher Horizons"
  chapter.B200000000000001.title: "CREATE — ENGINEERING THE PEAKS"
  chapter.B200000000000001.chapter_subtitle: "Power • Processing • Bulk Systems • Mechanical Crafting"
+ chapter.B300000000000001.title: "GEARING UP"
+ chapter.B300000000000001.chapter_subtitle: "Armor • Defense • Weapons • Enchanting"
+ chapter.B300000000000002.title: "FARMER'S DELIGHT"
+ chapter.B300000000000002.chapter_subtitle: "Ingredients • Cutting • Cooking • Expedition Meals"
+ chapter.B300000000000003.title: "IRON FURNACES"
+ chapter.B300000000000003.chapter_subtitle: "Faster Smelting • Furnace Tiers • Mountain Industry"
+ chapter.B300000000000004.title: "STORAGE DRAWERS"
+ chapter.B300000000000004.chapter_subtitle: "Bulk Storage • Upgrades • Controllers • Automation"
+ chapter.B300000000000005.title: "BACKPACKS"
+ chapter.B300000000000005.chapter_subtitle: "Portable Storage • Tiers • Upgrades • Exploration"
+ chapter.B300000000000006.title: "REFINED STORAGE"
+ chapter.B300000000000006.chapter_subtitle: "Network • Controller • Disks • Grid • Automation"
+ chapter.B300000000000007.title: "APOTHEOSIS"
+ chapter.B300000000000007.chapter_subtitle: "Enchanting • Affixes • Gems • Reforging • Endgame Gear"
 
  quest.C100000000000001.title: "Welcome to Peaks & Talons"
  quest.C100000000000001.quest_desc: ["The mountains are the road ahead. Prepare before you answer the Call of the Peaks."]
@@ -26,7 +41,6 @@
  quest.C100000000000006.quest_desc: ["Faster smelting makes gearing and engineering less painful."]
  quest.C100000000000007.title: "Easy Villagers"
  quest.C100000000000007.quest_desc: ["Build a safer trading network before the dangerous mountain chapters begin."]
-
  quest.C200000000000001.title: "The Call of the Peaks"
  quest.C200000000000001.quest_desc: ["Mountain Eagles are rare. Search the highest peaks and watch the sky.","Your choice matters: HUNT the Eagle or BOND with it. Read both paths before acting."]
  quest.C200000000000002.title: "HUNT — Challenge the Eagle"
@@ -41,7 +55,6 @@
  quest.C200000000000006.quest_desc: ["Take to the sky with your bonded Eagle and learn controlled flight."]
  quest.C200000000000007.title: "Compass Materials"
  quest.C200000000000007.quest_desc: ["Both Hunt and Bond lead forward. Mill an Eagle Talon into Crushed Talon, then use Crushing Wheels to make Talon Dust.","Talon Dust replaces redstone in the Explorer's Compass recipe."]
-
  quest.C300000000000001.title: "Eye of the Eagle"
  quest.C300000000000001.quest_desc: ["The blue Eye is a true Eagle relic. Bonded players may later hunt another rare Eagle if they choose to obtain one."]
  quest.C300000000000002.title: "Storm Crystal"
@@ -56,18 +69,16 @@
  quest.C300000000000006.quest_desc: ["Run an Eagle Talon through Create's Millstone to produce Crushed Talon."]
  quest.C300000000000007.title: "Crush It to Dust"
  quest.C300000000000007.quest_desc: ["Run Crushed Talon through Crushing Wheels. Talon Dust is the final Compass ingredient."]
-
  quest.C400000000000001.title: "The Explorer's Compass"
  quest.C400000000000001.quest_desc: ["Craft the Explorer's Compass with Eagle Feather and Talon Dust in place of redstone.","&eThere is no fast travel. Locate Orduk's Cave, then make the journey yourself.&r"]
  quest.C400000000000002.title: "Find Orduk's Cave"
  quest.C400000000000002.quest_desc: ["Search the Explorer's Compass for Orduk's Cave. Gear up before entering; Orduk is tougher than the entire Eagle encounter."]
  quest.C400000000000003.title: "ORDUK, THE CAVE TROLL"
- quest.C400000000000003.quest_desc: ["&cBOSS ENCOUNTER&r","Orduk is short, broad, goblin-armored and far faster than he looks.","Learn his Ground Slam, Backhand Sweep, Troll Charge and Leap. At half health, the battle becomes a violent mountain storm."]
+ quest.C400000000000003.quest_desc: ["&cBOSS ENCOUNTER&r","Orduk is short, broad, goblin-armored and far faster than he looks.","Learn his Ground Slam, Backhand Sweep, Troll Charge, Boulder Throw and Leap. At half health, the battle becomes a violent mountain storm."]
  quest.C400000000000004.title: "Fallen Troll"
  quest.C400000000000004.quest_desc: ["Claim Orduk's Troll Heart. Keep it safe; it will become your guide toward the Griffin's mountain."]
  quest.C400000000000005.title: "Higher Horizons"
- quest.C400000000000005.quest_desc: ["&bCURRENT PLAYABLE STORY END&r","You survived the Eagles and defeated Orduk. The Griffin is Friday's problem."]
-
+ quest.C400000000000005.quest_desc: ["&bCURRENT PLAYABLE STORY END&r","You survived the Eagles and defeated Orduk. The Griffin comes later."]
  quest.E200000000000001.title: "Andesite Beginnings"
  quest.E200000000000001.quest_desc: ["Create begins with Andesite Alloy."]
  quest.E200000000000002.title: "Cogwheels & Shafts"
@@ -96,4 +107,48 @@
  quest.E20000000000000D.quest_desc: ["Build a Precision Mechanism and enter advanced Create engineering."]
  quest.E20000000000000E.title: "Mechanical Crafters"
  quest.E20000000000000E.quest_desc: ["Build a Mechanical Crafter array. Eagle Eye and Dragon Eye necklaces require machinery beyond a crafting table."]
+
+ quest.D310000000000001.title:"Iron Ready" quest.D310000000000001.quest_desc:["A full expedition starts with reliable armor. Iron is the minimum recommended protection before hunting the high peaks."]
+ quest.D310000000000002.title:"Shield Discipline" quest.D310000000000002.quest_desc:["Carry a shield and learn when to block. Eagle dives and Orduk's telegraphed attacks reward active defense."]
+ quest.D310000000000003.title:"Diamond Weapon" quest.D310000000000003.quest_desc:["Upgrade your primary weapon before serious boss hunting. Damage alone will not replace learning attack tells."]
+ quest.D310000000000004.title:"Diamond Protection" quest.D310000000000004.quest_desc:["Diamond armor is the intended baseline for the later mountain encounters. Enchant it before challenging Orduk."]
+ quest.D310000000000005.title:"Enchant for the Climb" quest.D310000000000005.quest_desc:["Build an enchanting setup. Protection, Feather Falling and weapon enchantments make the mountain much more forgiving."]
+
+ quest.D320000000000001.title:"Gather the Harvest" quest.D320000000000001.quest_desc:["Farmer's Delight expands ordinary crops into useful expedition food. Start by establishing dependable ingredients."]
+ quest.D320000000000002.title:"Knife & Cutting Board" quest.D320000000000002.quest_desc:["Craft a Farmer's Delight knife and cutting board. Cutting recipes turn raw ingredients into components and often produce useful byproducts."]
+ quest.D320000000000003.title:"Cooking Pot" quest.D320000000000003.quest_desc:["The Cooking Pot combines ingredients into filling meals. Keep bowls available for recipes that need containers."]
+ quest.D320000000000004.title:"Skillet & Heat" quest.D320000000000004.quest_desc:["Use Farmer's Delight cooking tools over valid heat sources. Build a compact kitchen before long expeditions."]
+ quest.D320000000000005.title:"Pack an Expedition Meal" quest.D320000000000005.quest_desc:["Prepare high-saturation meals before entering boss territory. Food is support progression, but poor supplies make every encounter harder."]
+
+ quest.D330000000000001.title:"Vanilla Furnace" quest.D330000000000001.quest_desc:["Iron Furnaces upgrades the familiar furnace into faster, more capable tiers."]
+ quest.D330000000000002.title:"Iron Furnace" quest.D330000000000002.quest_desc:["Upgrade into the Iron tier. Higher tiers improve throughput and reduce waiting during gear and Create preparation."]
+ quest.D330000000000003.title:"Gold Furnace" quest.D330000000000003.quest_desc:["Continue the furnace upgrade chain. Treat each tier as infrastructure rather than boss progression."]
+ quest.D330000000000004.title:"Diamond Furnace" quest.D330000000000004.quest_desc:["Diamond-tier smelting is fast enough to support larger engineering projects and repeated equipment crafting."]
+ quest.D330000000000005.title:"Netherite Furnace" quest.D330000000000005.quest_desc:["Reach the top conventional furnace tier and use upgrades/automation where useful for your base."]
+
+ quest.D340000000000001.title:"Why Drawers?" quest.D340000000000001.quest_desc:["Storage Drawers excels at large quantities of a smaller number of item types: stone, ores, crops and Create materials."]
+ quest.D340000000000002.title:"Build a Drawer Bank" quest.D340000000000002.quest_desc:["Place drawers together and organize bulk materials. Interact with drawer faces rather than treating them like ordinary chests."]
+ quest.D340000000000003.title:"Capacity Upgrades" quest.D340000000000003.quest_desc:["Drawer upgrades increase how much a drawer can hold without expanding the footprint of your storage wall."]
+ quest.D340000000000004.title:"Lock & Void Wisely" quest.D340000000000004.quest_desc:["Locking preserves an assigned item type. Void-style upgrades can destroy overflow, so use them only where excess is truly disposable."]
+ quest.D340000000000005.title:"Controller Network" quest.D340000000000005.quest_desc:["A Drawer Controller provides a central interaction point for a connected drawer network and makes automation far cleaner."]
+
+ quest.D350000000000001.title:"Your First Backpack" quest.D350000000000001.quest_desc:["Portable storage is extremely valuable in the mountains. Craft the backpack from your installed backpack mod and learn its open keybind."]
+ quest.D350000000000002.title:"Upgrade the Pack" quest.D350000000000002.quest_desc:["Increase backpack capacity before long exploration trips. Keep emergency food and recovery supplies separate from loot."]
+ quest.D350000000000003.title:"More Capacity" quest.D350000000000003.quest_desc:["Continue through the backpack material tiers as resources allow. Larger packs reduce forced returns from remote peaks."]
+ quest.D350000000000004.title:"High-Tier Expedition Pack" quest.D350000000000004.quest_desc:["Prepare a high-capacity pack before searching distant structures such as Orduk's Cave."]
+ quest.D350000000000005.title:"Backpack Upgrades" quest.D350000000000005.quest_desc:["Explore the installed backpack upgrades: pickup, feeding, filtering, stacking and other utility modules can automate expedition chores."]
+
+ quest.D360000000000001.title:"Begin Digital Storage" quest.D360000000000001.quest_desc:["Refined Storage replaces sprawling chest rooms with a network. Begin by gathering its basic processor and quartz-based materials."]
+ quest.D360000000000002.title:"Power the Network" quest.D360000000000002.quest_desc:["A Refined Storage network requires power. Plan continuous energy before trusting it with your main inventory."]
+ quest.D360000000000003.title:"Controller & Grid" quest.D360000000000003.quest_desc:["The Controller manages the network and a Grid provides access. A Crafting Grid later combines storage access with crafting."]
+ quest.D360000000000004.title:"Disk Drive & Storage Disks" quest.D360000000000004.quest_desc:["Disk Drives hold storage disks. Start small, then expand disk capacity as your expedition loot grows."]
+ quest.D360000000000005.title:"Crafting Grid" quest.D360000000000005.quest_desc:["Use a Crafting Grid to craft directly from network contents instead of moving materials between containers."]
+ quest.D360000000000006.title:"Import, Export & Automate" quest.D360000000000006.quest_desc:["Importers, Exporters, External Storage and later autocrafting let the network interact with machines and bulk storage."]
+
+ quest.D370000000000001.title:"Apotheosis Begins" quest.D370000000000001.quest_desc:["Apotheosis greatly expands enchanting and equipment progression. Learn its modules gradually instead of treating every unfamiliar affix item as vendor trash."]
+ quest.D370000000000002.title:"Advanced Enchanting" quest.D370000000000002.quest_desc:["Apotheosis changes enchanting through bookshelf statistics and specialized shelves. Build toward stronger enchantment setups deliberately."]
+ quest.D370000000000003.title:"Affix Equipment" quest.D370000000000003.quest_desc:["Affix gear can carry powerful randomized bonuses. Compare the actual affixes and rarity rather than judging equipment only by vanilla material."]
+ quest.D370000000000004.title:"Gems & Sockets" quest.D370000000000004.quest_desc:["Apotheosis gems provide bonuses when socketed into compatible affix equipment. Match gem effects to the slot and your build."]
+ quest.D370000000000005.title:"Salvage & Reforge" quest.D370000000000005.quest_desc:["Salvaging unwanted affix gear feeds the reforging loop. Reforging lets you pursue stronger equipment rather than relying only on random drops."]
+ quest.D370000000000006.title:"Boss-Ready Affixes" quest.D370000000000006.quest_desc:["Build a coherent set of enchanted and affixed equipment for late mountain encounters. Orduk should still require learning mechanics, not only stat stacking."]
 }
