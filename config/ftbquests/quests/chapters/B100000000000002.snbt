@@ -2,17 +2,20 @@
  filename:"B100000000000002"
  group:"A100000000000001"
  id:"B100000000000002"
- title:"§b§lII — LORD OF THE SKIES"
- subtitle:"§7Call of the Peaks • Hunt or Bond • Eagle Relics"
  icon:{id:"peaksandtalons:eagle_feather"}
  order_index:1
+ images:[
+  {image:"peaksandtalons:textures/item/eagle_feather.png" width:3.2d height:3.2d x:-6.0d y:0.5d rotation:-18.0d order:-1 hover:["The Call of the Peaks"]}
+  {image:"peaksandtalons:textures/item/eye_of_the_eagle.png" width:3.0d height:3.0d x:-6.0d y:4.5d order:-1 hover:["HUNT — survive Vengeance"]}
+  {image:"peaksandtalons:textures/item/golden_eagle_harness.png" width:3.0d height:3.0d x:6.0d y:4.5d order:-1 hover:["BOND — earn the Eagle's trust"]}
+ ]
  quests:[
-  {id:"C200000000000001" title:"The Call of the Peaks" description:["Mountain Eagles are rare. Search the highest peaks and watch the sky.","Your next choice matters: Hunt the eagle, or earn its trust through Bond."] x:0.0d y:0.0d icon:{id:"peaksandtalons:eagle_feather"} max_completable_dependents:1 tasks:[{id:"D200000000000001" type:"item" item:{count:1,id:"peaksandtalons:eagle_feather"}}] rewards:[{id:"R200000000000001" type:"xp" xp:100}]}
-  {id:"C200000000000002" title:"HUNT — Challenge the Eagle" description:["§cCHOICE: HUNT§r","Killing the eagle commits you to the combat route. Be ready for what answers its death."] x:-3.0d y:2.0d dependencies:["C200000000000001"] icon:{id:"minecraft:iron_sword"} tasks:[{id:"D200000000000002" type:"advancement" advancement:"peaksandtalons:eagle/hunter_path"}] rewards:[{id:"R200000000000002" type:"xp" xp:200}]}
-  {id:"C200000000000003" title:"Vengeance from Above" description:["Three Vengeance Eagles descend after the hunt.","Stay mobile, watch their dives, and survive the flock."] x:-3.0d y:4.0d dependencies:["C200000000000002"] icon:{id:"peaksandtalons:eye_of_the_eagle"} tasks:[{id:"D200000000000003" type:"advancement" advancement:"peaksandtalons:eagle/vengeance_defeated"}] rewards:[{id:"R200000000000003" type:"xp" xp:450},{id:"R200000000000013" type:"item" item:{count:1,id:"peaksandtalons:eagle_feather"}}]}
-  {id:"C200000000000004" title:"BOND — Earn Its Trust" description:["§aCHOICE: BOND§r","Approach with salmon and patience. A wild mountain eagle does not surrender its trust easily."] x:3.0d y:2.0d dependencies:["C200000000000001"] icon:{id:"minecraft:salmon"} tasks:[{id:"D200000000000004" type:"advancement" advancement:"peaksandtalons:eagle/bond_path"}] rewards:[{id:"R200000000000004" type:"xp" xp:200}]}
-  {id:"C200000000000005" title:"Bond of the Summit" description:["Mounting is only the beginning. Stay with the eagle long enough for it to accept you."] x:3.0d y:4.0d dependencies:["C200000000000004"] icon:{id:"minecraft:saddle"} tasks:[{id:"D200000000000005" type:"advancement" advancement:"peaksandtalons:eagle/tamed"}] rewards:[{id:"R200000000000005" type:"xp" xp:400},{id:"R200000000000015" type:"item" item:{count:1,id:"peaksandtalons:eagle_feather"}}]}
-  {id:"C200000000000006" title:"First Flight" description:["Take to the sky with your bonded eagle. The mountain is no longer only an obstacle."] x:3.0d y:6.0d dependencies:["C200000000000005"] icon:{id:"peaksandtalons:golden_eagle_harness"} tasks:[{id:"D200000000000006" type:"advancement" advancement:"peaksandtalons:eagle/first_flight"}] rewards:[{id:"R200000000000006" type:"xp" xp:300}]}
-  {id:"C200000000000007" title:"Compass Materials" description:["Both paths lead forward.","Combine an Eagle Feather with Talon Dust to replace redstone in the Explorer's Compass recipe. The compass will eventually reveal Orduk's Cave."] x:0.0d y:8.0d dependencies:["C200000000000003","C200000000000006"] dependency_requirement:"one_completed" icon:{id:"peaksandtalons:talon_dust"} tasks:[{id:"D200000000000007" type:"item" item:{count:1,id:"peaksandtalons:talon_dust"}}] rewards:[{id:"R200000000000007" type:"xp" xp:250}]}
+  {id:"C200000000000001" x:0.0d y:0.0d icon:{id:"peaksandtalons:eagle_feather"} max_completable_dependents:1 tasks:[{id:"D200000000000001" type:"item" item:{count:1,id:"peaksandtalons:eagle_feather"}}] rewards:[{id:"R200000000000001" type:"xp" xp:100}]}
+  {id:"C200000000000002" x:-3.0d y:2.0d dependencies:["C200000000000001"] icon:{id:"minecraft:iron_sword"} tasks:[{id:"D200000000000002" type:"advancement" advancement:"peaksandtalons:eagle/hunter_path"}] rewards:[{id:"R200000000000002" type:"xp" xp:200}]}
+  {id:"C200000000000003" x:-3.0d y:4.0d dependencies:["C200000000000002"] icon:{id:"peaksandtalons:eye_of_the_eagle"} tasks:[{id:"D200000000000003" type:"advancement" advancement:"peaksandtalons:eagle/vengeance_defeated"}] rewards:[{id:"R200000000000003" type:"xp" xp:450},{id:"R200000000000013" type:"item" item:{count:1,id:"peaksandtalons:eagle_feather"}}]}
+  {id:"C200000000000004" x:3.0d y:2.0d dependencies:["C200000000000001"] icon:{id:"minecraft:salmon"} tasks:[{id:"D200000000000004" type:"advancement" advancement:"peaksandtalons:eagle/bond_path"}] rewards:[{id:"R200000000000004" type:"xp" xp:200}]}
+  {id:"C200000000000005" x:3.0d y:4.0d dependencies:["C200000000000004"] icon:{id:"minecraft:saddle"} tasks:[{id:"D200000000000005" type:"advancement" advancement:"peaksandtalons:eagle/tamed"}] rewards:[{id:"R200000000000005" type:"xp" xp:400},{id:"R200000000000015" type:"item" item:{count:1,id:"peaksandtalons:eagle_feather"}}]}
+  {id:"C200000000000006" x:3.0d y:6.0d dependencies:["C200000000000005"] icon:{id:"peaksandtalons:golden_eagle_harness"} tasks:[{id:"D200000000000006" type:"advancement" advancement:"peaksandtalons:eagle/first_flight"}] rewards:[{id:"R200000000000006" type:"xp" xp:300}]}
+  {id:"C200000000000007" x:0.0d y:8.0d dependencies:["C200000000000003","C200000000000006"] dependency_requirement:"one_completed" icon:{id:"peaksandtalons:talon_dust"} tasks:[{id:"D200000000000007" type:"item" item:{count:1,id:"peaksandtalons:talon_dust"}}] rewards:[{id:"R200000000000007" type:"xp" xp:250}]}
  ]
 }
