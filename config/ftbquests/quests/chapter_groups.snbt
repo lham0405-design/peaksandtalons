@@ -2,5 +2,6 @@
 	chapter_groups: [
 		{id:"A100000000000001",order_index:0}
 		{id:"A100000000000002",order_index:1}
+		{id:"A100000000000003",order_index:2}
 	]
 }
