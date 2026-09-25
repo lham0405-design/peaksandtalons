@@ -1,0 +1,14 @@
+{
+ filename:"B300000000000001"
+ group:"A100000000000003"
+ id:"B300000000000001"
+ icon:{id:"minecraft:diamond_chestplate"}
+ order_index:0
+ quests:[
+  {id:"D310000000000001" x:0.0d y:0.0d icon:{id:"minecraft:iron_chestplate"} tasks:[{id:"D311000000000001" type:"item" item:{count:1,id:"minecraft:iron_chestplate"}}] rewards:[{id:"D312000000000001" type:"xp" xp:100}]}
+  {id:"D310000000000002" x:0.0d y:3.0d dependencies:["D310000000000001"] icon:{id:"minecraft:shield"} tasks:[{id:"D311000000000002" type:"item" item:{count:1,id:"minecraft:shield"}}] rewards:[{id:"D312000000000002" type:"xp" xp:100}]}
+  {id:"D310000000000003" x:0.0d y:6.0d dependencies:["D310000000000002"] icon:{id:"minecraft:diamond_sword"} tasks:[{id:"D311000000000003" type:"item" item:{count:1,id:"minecraft:diamond_sword"}}] rewards:[{id:"D312000000000003" type:"xp" xp:200}]}
+  {id:"D310000000000004" x:0.0d y:9.0d dependencies:["D310000000000003"] icon:{id:"minecraft:diamond_chestplate"} tasks:[{id:"D311000000000004" type:"item" item:{count:1,id:"minecraft:diamond_chestplate"}}] rewards:[{id:"D312000000000004" type:"xp" xp:300}]}
+  {id:"D310000000000005" x:0.0d y:12.0d dependencies:["D310000000000004"] icon:{id:"minecraft:enchanting_table"} tasks:[{id:"D311000000000005" type:"item" item:{count:1,id:"minecraft:enchanting_table"}}] rewards:[{id:"D312000000000005" type:"xp" xp:350}]}
+ ]
+}
