@@ -11,7 +11,7 @@
  ]
  quests:[
   {id:"C400000000000001" x:0.0d y:0.0d icon:{id:"explorerscompass:explorerscompass"} tasks:[{id:"D400000000000001" type:"item" item:{count:1,id:"explorerscompass:explorerscompass"}}] rewards:[{id:"R400000000000001" type:"xp" xp:300}]}
-  {id:"C400000000000002" x:0.0d y:3.0d dependencies:["C400000000000001"] icon:{id:"minecraft:pointed_dripstone"} tasks:[{id:"D400000000000002" type:"item" item:{count:16,id:"minecraft:torch"}}] rewards:[{id:"R400000000000002" type:"xp" xp:200}]}
+  {id:"C400000000000002" x:0.0d y:3.0d dependencies:["C400000000000001"] icon:{id:"minecraft:pointed_dripstone"} tasks:[{id:"D400000000000002" type:"structure" structure:"peaksandtalons:orduks_cave"}] rewards:[{id:"R400000000000002" type:"xp" xp:200}]}
   {id:"C400000000000003" x:0.0d y:6.0d dependencies:["C400000000000002"] icon:{id:"minecraft:iron_axe"} tasks:[{id:"D400000000000003" type:"kill" entity:"peaksandtalons:orduk" value:1L}] rewards:[{id:"R400000000000003" type:"xp" xp:1000}]}
   {id:"C400000000000004" x:0.0d y:9.0d dependencies:["C400000000000003"] icon:{id:"peaksandtalons:troll_heart"} tasks:[{id:"D400000000000004" type:"item" item:{count:1,id:"peaksandtalons:troll_heart"}}] rewards:[{id:"R400000000000004" type:"xp" xp:750}]}
   {id:"C400000000000005" x:0.0d y:12.0d dependencies:["C400000000000004"] icon:{id:"minecraft:nether_star"} tasks:[{id:"D400000000000005" type:"item" item:{count:1,id:"peaksandtalons:troll_heart"}}] rewards:[{id:"R400000000000005" type:"xp" xp:500}]}
