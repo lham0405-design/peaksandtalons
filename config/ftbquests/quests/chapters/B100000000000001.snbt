@@ -2,20 +2,18 @@
  filename:"B100000000000001"
  group:"A100000000000001"
  id:"B100000000000001"
- icon:{id:"minecraft:crafting_table"}
+ title:"Chapter I — The Trailhead"
+ subtitle:"Every legend begins below the clouds."
+ icon:{id:"minecraft:compass"}
  order_index:0
- images:[
-  {image:"minecraft:textures/item/iron_chestplate.png" width:2.5d height:2.5d x:-6.0d y:2.5d rotation:-12.0d order:-1 hover:["Gear for the climb"]}
-  {image:"minecraft:textures/item/bread.png" width:2.5d height:2.5d x:0.0d y:6.5d order:-1 hover:["Pack for a long expedition"]}
-  {image:"minecraft:textures/item/compass_16.png" width:2.2d height:2.2d x:6.5d y:0.5d order:-1 hover:["The peaks are waiting"]}
- ]
  quests:[
-  {id:"C100000000000001" x:0.0d y:0.0d icon:{id:"minecraft:crafting_table"} tasks:[{id:"D100000000000001" type:"item" item:{count:1,id:"minecraft:crafting_table"}}] rewards:[{id:"R100000000000001" type:"xp" xp:50}]}
-  {id:"C100000000000002" x:-3.0d y:2.0d dependencies:["C100000000000001"] icon:{id:"minecraft:iron_chestplate"} tasks:[{id:"D100000000000002" type:"item" item:{count:1,id:"minecraft:iron_chestplate"}}] rewards:[{id:"R100000000000002" type:"xp" xp:75}]}
-  {id:"C100000000000003" x:-3.0d y:4.0d dependencies:["C100000000000002"] icon:{id:"minecraft:shield"} tasks:[{id:"D100000000000003" type:"item" item:{count:1,id:"minecraft:shield"}}] rewards:[{id:"R100000000000003" type:"xp" xp:75}]}
-  {id:"C100000000000004" x:0.0d y:2.0d dependencies:["C100000000000001"] icon:{id:"minecraft:bread"} tasks:[{id:"D100000000000004" type:"item" item:{count:4,id:"minecraft:bread"}}] rewards:[{id:"R100000000000004" type:"xp" xp:50}]}
-  {id:"C100000000000005" x:0.0d y:4.0d dependencies:["C100000000000004"] icon:{id:"farmersdelight:cooking_pot"} tasks:[{id:"D100000000000005" type:"item" item:{count:1,id:"farmersdelight:cooking_pot"}}] rewards:[{id:"R100000000000005" type:"xp" xp:100}]}
-  {id:"C100000000000006" x:3.0d y:2.0d dependencies:["C100000000000001"] icon:{id:"ironfurnaces:iron_furnace"} tasks:[{id:"D100000000000006" type:"item" item:{count:1,id:"ironfurnaces:iron_furnace"}}] rewards:[{id:"R100000000000006" type:"xp" xp:75}]}
-  {id:"C100000000000007" x:5.5d y:2.0d dependencies:["C100000000000001"] icon:{id:"easy_villagers:trader"} tasks:[{id:"D100000000000007" type:"item" item:{count:1,id:"easy_villagers:trader"}}] rewards:[{id:"R100000000000007" type:"xp" xp:75}]}
+  {id:"C100000000000001" x:0.0d y:0.0d title:"A Place to Begin" description:["The mountains have always been there, watching from beyond the treeline. Before chasing stories of impossible wings, make a place worth returning to.","Craft a workbench and establish the first foothold of your expedition."] icon:{id:"minecraft:crafting_table"} tasks:[{id:"D100000000000001" type:"item" item:{count:1,id:"minecraft:crafting_table"}}] rewards:[{id:"R100000000000001" type:"xp" xp:50},{id:"R100000000000011" type:"item" item:{count:8,id:"minecraft:torch"}}]}
+  {id:"C100000000000002" x:0.0d y:2.5d dependencies:["C100000000000001"] title:"Steel for the Climb" description:["Cold, stone and claw punish the unprepared. Put iron between yourself and whatever waits above the cloud line."] icon:{id:"minecraft:iron_chestplate"} tasks:[{id:"D100000000000002" type:"item" item:{count:1,id:"minecraft:iron_chestplate"}}] rewards:[{id:"R100000000000002" type:"xp" xp:75},{id:"R100000000000012" type:"item" item:{count:4,id:"minecraft:iron_ingot"}}]}
+  {id:"C100000000000003" x:0.0d y:5.0d dependencies:["C100000000000002"] title:"Hold the Line" description:["A sword ends a fight. A shield lets you survive long enough to use it. The peaks favor survivors."] icon:{id:"minecraft:shield"} tasks:[{id:"D100000000000003" type:"item" item:{count:1,id:"minecraft:shield"}}] rewards:[{id:"R100000000000003" type:"xp" xp:75},{id:"R100000000000013" type:"item" item:{count:8,id:"minecraft:arrow"}}]}
+  {id:"C100000000000004" x:0.0d y:7.5d dependencies:["C100000000000003"] title:"Food for the Road" description:["The climb will take longer than you think. Pack enough food that hunger never makes the decision to turn back for you."] icon:{id:"minecraft:bread"} tasks:[{id:"D100000000000004" type:"item" item:{count:8,id:"minecraft:bread"}}] rewards:[{id:"R100000000000004" type:"xp" xp:75},{id:"R100000000000014" type:"item" item:{count:4,id:"minecraft:cooked_beef"}}]}
+  {id:"C100000000000005" x:-3.0d y:10.0d dependencies:["C100000000000004"] title:"A Better Meal" description:["Farmer's Delight can turn provisions into expedition food. Learn its kitchen before the trail grows steep.","This is support progression: useful, but not the heart of the legend."] icon:{id:"farmersdelight:cooking_pot"} tasks:[{id:"D100000000000005" type:"item" item:{count:1,id:"farmersdelight:cooking_pot"}}] rewards:[{id:"R100000000000005" type:"xp" xp:100}]}
+  {id:"C100000000000006" x:0.0d y:10.0d dependencies:["C100000000000004"] title:"Hotter Forges" description:["Iron Furnaces will shorten the hours spent waiting beside a fire. Better equipment means more time exploring."] icon:{id:"ironfurnaces:iron_furnace"} tasks:[{id:"D100000000000006" type:"item" item:{count:1,id:"ironfurnaces:iron_furnace"}}] rewards:[{id:"R100000000000006" type:"xp" xp:100}]}
+  {id:"C100000000000007" x:3.0d y:10.0d dependencies:["C100000000000004"] title:"A Living Outpost" description:["Even heroes need traders, supplies and a safe settlement. Easy Villagers can turn your foothold into an expedition base."] icon:{id:"easy_villagers:trader"} tasks:[{id:"D100000000000007" type:"item" item:{count:1,id:"easy_villagers:trader"}}] rewards:[{id:"R100000000000007" type:"xp" xp:100}]}
+  {id:"C100000000000008" x:0.0d y:13.0d dependencies:["C100000000000004"] title:"The Call Above" description:["You are equipped. You are fed. You have a place below to call home.","Now look upward. Travelers speak of a shadow crossing the sun — a great Eagle whose wings command the high country. Chapter II awaits."] icon:{id:"minecraft:feather"} tasks:[{id:"D100000000000008" type:"item" item:{count:1,id:"minecraft:feather"}}] rewards:[{id:"R100000000000008" type:"xp" xp:150},{id:"R100000000000018" type:"item" item:{count:1,id:"minecraft:spyglass"}}]}
  ]
 }
