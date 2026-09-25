@@ -30,6 +30,7 @@ public final class ModItems {
     public static final DeferredItem<Item> EYE_OF_THE_SUMMIT = ITEMS.registerSimpleItem("eye_of_the_summit", new Item.Properties().rarity(Rarity.EPIC));
     public static final DeferredItem<Item> GOLDEN_EAGLE_HARNESS = ITEMS.registerSimpleItem("golden_eagle_harness", new Item.Properties().rarity(Rarity.EPIC).stacksTo(1));
     public static final DeferredItem<TrollHeartItem> TROLL_HEART = ITEMS.registerItem("troll_heart", p -> new TrollHeartItem(p.rarity(Rarity.EPIC).stacksTo(1).fireResistant()));
+    public static final DeferredItem<Item> HEART_OF_ORDUK = ITEMS.registerSimpleItem("heart_of_orduk", new Item.Properties().rarity(Rarity.EPIC).stacksTo(1).fireResistant());
     public static final DeferredItem<Item> DRAGONS_EGG_SOCKET = ITEMS.registerSimpleItem("dragons_egg_socket", new Item.Properties().rarity(Rarity.EPIC));
     public static final DeferredItem<EagleSpawnEggItem> EAGLE_SPAWN_EGG = ITEMS.registerItem("eagle_spawn_egg", EagleSpawnEggItem::new);
     public static final DeferredItem<OrdukSpawnEggItem> ORDUK_SPAWN_EGG = ITEMS.registerItem("orduk_spawn_egg", OrdukSpawnEggItem::new);
