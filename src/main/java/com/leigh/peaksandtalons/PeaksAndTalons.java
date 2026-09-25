@@ -1,5 +1,6 @@
 package com.leigh.peaksandtalons;
 
+import com.leigh.peaksandtalons.registry.ModBlocks;
 import com.leigh.peaksandtalons.registry.ModCreativeTab;
 import com.leigh.peaksandtalons.registry.ModEntities;
 import com.leigh.peaksandtalons.registry.ModItems;
@@ -8,11 +9,11 @@ import net.neoforged.fml.common.Mod;
 
 @Mod(PeaksAndTalons.MOD_ID)
 public final class PeaksAndTalons {
-    public static final String MOD_ID = "peaksandtalons";
-
-    public PeaksAndTalons(IEventBus modEventBus) {
-        ModItems.ITEMS.register(modEventBus);
-        ModEntities.ENTITIES.register(modEventBus);
-        ModCreativeTab.TABS.register(modEventBus);
-    }
+ public static final String MOD_ID="peaksandtalons";
+ public PeaksAndTalons(IEventBus modEventBus){
+  ModBlocks.BLOCKS.register(modEventBus);
+  ModItems.ITEMS.register(modEventBus);
+  ModEntities.ENTITIES.register(modEventBus);
+  ModCreativeTab.TABS.register(modEventBus);
+ }
 }
