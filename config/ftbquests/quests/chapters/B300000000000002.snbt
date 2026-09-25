@@ -1,0 +1,10 @@
+{
+ filename:"B300000000000002" group:"A100000000000003" id:"B300000000000002" icon:{id:"minecraft:bread"} order_index:1
+ quests:[
+ {id:"D320000000000001" x:0.0d y:0.0d icon:{id:"minecraft:wheat"} tasks:[{id:"D321000000000001" type:"checkmark"}] rewards:[{id:"D322000000000001" type:"xp" xp:75}]}
+ {id:"D320000000000002" x:0.0d y:3.0d dependencies:["D320000000000001"] icon:{id:"minecraft:iron_knife"} tasks:[{id:"D321000000000002" type:"checkmark"}] rewards:[{id:"D322000000000002" type:"xp" xp:100}]}
+ {id:"D320000000000003" x:0.0d y:6.0d dependencies:["D320000000000002"] icon:{id:"minecraft:bowl"} tasks:[{id:"D321000000000003" type:"checkmark"}] rewards:[{id:"D322000000000003" type:"xp" xp:125}]}
+ {id:"D320000000000004" x:0.0d y:9.0d dependencies:["D320000000000003"] icon:{id:"minecraft:campfire"} tasks:[{id:"D321000000000004" type:"checkmark"}] rewards:[{id:"D322000000000004" type:"xp" xp:150}]}
+ {id:"D320000000000005" x:0.0d y:12.0d dependencies:["D320000000000004"] icon:{id:"minecraft:golden_carrot"} tasks:[{id:"D321000000000005" type:"checkmark"}] rewards:[{id:"D322000000000005" type:"xp" xp:200}]}
+ ]
+}
