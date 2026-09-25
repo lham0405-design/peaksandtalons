@@ -1,1 +1,14 @@
-{"type":"minecraft:crafting_shapeless","ingredients":[{"item":"peaksandtalons:gold_chain"},{"item":"peaksandtalons:eye_of_the_eagle"}],"result":{"id":"peaksandtalons:gold_eye_of_the_eagle_necklace","count":1}}
+{
+  "type": "create:mechanical_crafting",
+  "accept_mirrored": false,
+  "pattern": [
+    " C ",
+    "CEC",
+    " C "
+  ],
+  "key": {
+    "C": { "item": "peaksandtalons:gold_chain" },
+    "E": { "item": "peaksandtalons:eye_of_the_eagle" }
+  },
+  "result": { "id": "peaksandtalons:gold_eye_of_the_eagle_necklace", "count": 1 }
+}
