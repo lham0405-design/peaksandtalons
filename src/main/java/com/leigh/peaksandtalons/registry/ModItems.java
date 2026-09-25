@@ -32,6 +32,7 @@ public final class ModItems {
     public static final DeferredItem<Item> TROLL_HEART = ITEMS.registerSimpleItem("troll_heart", new Item.Properties().rarity(Rarity.EPIC).stacksTo(1).fireResistant());
     public static final DeferredItem<Item> DRAGONS_EGG_SOCKET = ITEMS.registerSimpleItem("dragons_egg_socket", new Item.Properties().rarity(Rarity.EPIC));
     public static final DeferredItem<EagleSpawnEggItem> EAGLE_SPAWN_EGG = ITEMS.registerItem("eagle_spawn_egg", EagleSpawnEggItem::new);
+    public static final DeferredItem<OrdukSpawnEggItem> ORDUK_SPAWN_EGG = ITEMS.registerItem("orduk_spawn_egg", OrdukSpawnEggItem::new);
     public static final Map<String, DeferredItem<NecklaceItem>> NECKLACES = new LinkedHashMap<>();
     static { for (ChainMaterial chain : ChainMaterial.values()) for (SocketType socket : SocketType.values()) { String id=chain.name().toLowerCase()+"_"+socket.name().toLowerCase()+"_necklace"; NECKLACES.put(id, ITEMS.registerItem(id,p->new NecklaceItem(chain,socket,p))); } }
     private ModItems() {}
