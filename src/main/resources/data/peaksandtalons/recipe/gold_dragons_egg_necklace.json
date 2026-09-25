@@ -1,1 +1,14 @@
-{"type":"minecraft:crafting_shapeless","ingredients":[{"item":"peaksandtalons:gold_chain"},{"item":"peaksandtalons:dragons_egg_socket"}],"result":{"id":"peaksandtalons:gold_dragons_egg_necklace","count":1}}
+{
+  "type": "create:mechanical_crafting",
+  "accept_mirrored": false,
+  "pattern": [
+    " C ",
+    "CDC",
+    " C "
+  ],
+  "key": {
+    "C": { "item": "peaksandtalons:gold_chain" },
+    "D": { "item": "peaksandtalons:dragons_egg_socket" }
+  },
+  "result": { "id": "peaksandtalons:gold_dragons_egg_necklace", "count": 1 }
+}
