@@ -42,5 +42,5 @@ public class OrdukEntity extends Monster {
   case 5->{if(hasLineOfSight(t)){level().levelEvent(2001,t.blockPosition(),net.minecraft.world.level.block.Block.getId(Blocks.COBBLESTONE.defaultBlockState()));t.hurt(damageSources().mobAttack(this),12);Vec3 a=t.position().subtract(position()).normalize();t.push(a.x*.75,.28,a.z*.75);}}
  }}
  @Override public boolean doHurtTarget(Entity t){boolean h=super.doHurtTarget(t);if(h&&t instanceof LivingEntity l)l.knockback(1.1F,getX()-l.getX(),getZ()-l.getZ());return h;}
- @Override protected void dropCustomDeathLoot(ServerLevel l,DamageSource s,boolean hit){super.dropCustomDeathLoot(l,s,hit);spawnAtLocation(new ItemStack(ModItems.TROLL_HEART.get()));if(stormStarted)l.setWeatherParameters(20*20,0,false,false);}
+ @Override protected void dropCustomDeathLoot(ServerLevel l,DamageSource s,boolean hit){super.dropCustomDeathLoot(l,s,hit);spawnAtLocation(new ItemStack(ModItems.HEART_OF_ORDUK.get()));if(stormStarted)l.setWeatherParameters(20*20,0,false,false);}
 }
