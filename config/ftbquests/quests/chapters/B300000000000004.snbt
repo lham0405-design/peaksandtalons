@@ -1,0 +1,10 @@
+{
+ filename:"B300000000000004" group:"A100000000000003" id:"B300000000000004" icon:{id:"minecraft:chest"} order_index:3
+ quests:[
+ {id:"D340000000000001" x:0.0d y:0.0d icon:{id:"minecraft:chest"} tasks:[{id:"D341000000000001" type:"checkmark"}] rewards:[{id:"D342000000000001" type:"xp" xp:75}]}
+ {id:"D340000000000002" x:0.0d y:3.0d dependencies:["D340000000000001"] icon:{id:"minecraft:oak_planks"} tasks:[{id:"D341000000000002" type:"checkmark"}] rewards:[{id:"D342000000000002" type:"xp" xp:100}]}
+ {id:"D340000000000003" x:0.0d y:6.0d dependencies:["D340000000000002"] icon:{id:"minecraft:iron_ingot"} tasks:[{id:"D341000000000003" type:"checkmark"}] rewards:[{id:"D342000000000003" type:"xp" xp:125}]}
+ {id:"D340000000000004" x:0.0d y:9.0d dependencies:["D340000000000003"] icon:{id:"minecraft:diamond"} tasks:[{id:"D341000000000004" type:"checkmark"}] rewards:[{id:"D342000000000004" type:"xp" xp:175}]}
+ {id:"D340000000000005" x:0.0d y:12.0d dependencies:["D340000000000004"] icon:{id:"minecraft:redstone"} tasks:[{id:"D341000000000005" type:"checkmark"}] rewards:[{id:"D342000000000005" type:"xp" xp:225}]}
+ ]
+}
