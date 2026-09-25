@@ -1,8 +1,9 @@
 {
-  "type": "minecraft:smelting",
-  "category": "misc",
-  "ingredient": { "item": "peaksandtalons:eagle_talon" },
-  "result": { "id": "peaksandtalons:talon_blade", "count": 1 },
-  "experience": 0.35,
-  "cookingtime": 200
+  "type": "create:fan_blasting",
+  "ingredients": [
+    { "item": "peaksandtalons:eagle_talon" }
+  ],
+  "results": [
+    { "id": "peaksandtalons:talon_blade", "count": 1 }
+  ]
 }
