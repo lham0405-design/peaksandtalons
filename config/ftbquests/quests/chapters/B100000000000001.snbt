@@ -2,17 +2,20 @@
  filename:"B100000000000001"
  group:"A100000000000001"
  id:"B100000000000001"
- title:"§6§lI — JOURNEY BEGINS"
- subtitle:"§7Welcome • Gear & Progress • Food & Utility"
  icon:{id:"minecraft:crafting_table"}
  order_index:0
+ images:[
+  {image:"minecraft:textures/item/iron_chestplate.png" width:2.5d height:2.5d x:-6.0d y:2.5d rotation:-12.0d order:-1 hover:["Gear for the climb"]}
+  {image:"minecraft:textures/item/bread.png" width:2.5d height:2.5d x:0.0d y:6.5d order:-1 hover:["Pack for a long expedition"]}
+  {image:"minecraft:textures/item/compass_16.png" width:2.2d height:2.2d x:6.5d y:0.5d order:-1 hover:["The peaks are waiting"]}
+ ]
  quests:[
-  {id:"C100000000000001" title:"Welcome to Peaks & Talons" description:["The mountains are not background scenery here. They are the road ahead.","Prepare before you answer the Call of the Peaks."] x:0.0d y:0.0d icon:{id:"minecraft:crafting_table"} tasks:[{id:"D100000000000001" type:"item" item:{count:1,id:"minecraft:crafting_table"}}] rewards:[{id:"R100000000000001" type:"xp" xp:50}]}
-  {id:"C100000000000002" title:"Gear Up" description:["Mountain predators punish poor preparation.","Craft iron armor before climbing into eagle country."] x:-3.0d y:2.0d dependencies:["C100000000000001"] icon:{id:"minecraft:iron_chestplate"} tasks:[{id:"D100000000000002" type:"item" item:{count:1,id:"minecraft:iron_chestplate"}}] rewards:[{id:"R100000000000002" type:"xp" xp:75}]}
-  {id:"C100000000000003" title:"A Shield Against the Peaks" description:["A shield will not solve every encounter, but it can buy the second you need."] x:-3.0d y:4.0d dependencies:["C100000000000002"] icon:{id:"minecraft:shield"} tasks:[{id:"D100000000000003" type:"item" item:{count:1,id:"minecraft:shield"}}] rewards:[{id:"R100000000000003" type:"xp" xp:75}]}
-  {id:"C100000000000004" title:"Pack Food" description:["Do not climb hungry. Carry reliable food before leaving the lowlands."] x:0.0d y:2.0d dependencies:["C100000000000001"] icon:{id:"minecraft:bread"} tasks:[{id:"D100000000000004" type:"item" item:{count:4,id:"minecraft:bread"}}] rewards:[{id:"R100000000000004" type:"xp" xp:50}]}
-  {id:"C100000000000005" title:"Farmer's Delight" description:["The cooking pot opens a useful support path for longer expeditions.","This is optional support progression, not the main Peaks & Talons story."] x:0.0d y:4.0d dependencies:["C100000000000004"] icon:{id:"farmersdelight:cooking_pot"} tasks:[{id:"D100000000000005" type:"item" item:{count:1,id:"farmersdelight:cooking_pot"}}] rewards:[{id:"R100000000000005" type:"xp" xp:100}]}
-  {id:"C100000000000006" title:"Iron Furnaces" description:["A faster furnace makes gearing and engineering less painful."] x:3.0d y:2.0d dependencies:["C100000000000001"] icon:{id:"ironfurnaces:iron_furnace"} tasks:[{id:"D100000000000006" type:"item" item:{count:1,id:"ironfurnaces:iron_furnace"}}] rewards:[{id:"R100000000000006" type:"xp" xp:75}]}
-  {id:"C100000000000007" title:"Easy Villagers" description:["Build a safer trading network before the dangerous mountain chapters begin."] x:5.5d y:2.0d dependencies:["C100000000000001"] icon:{id:"easy_villagers:trader"} tasks:[{id:"D100000000000007" type:"item" item:{count:1,id:"easy_villagers:trader"}}] rewards:[{id:"R100000000000007" type:"xp" xp:75}]}
+  {id:"C100000000000001" x:0.0d y:0.0d icon:{id:"minecraft:crafting_table"} tasks:[{id:"D100000000000001" type:"item" item:{count:1,id:"minecraft:crafting_table"}}] rewards:[{id:"R100000000000001" type:"xp" xp:50}]}
+  {id:"C100000000000002" x:-3.0d y:2.0d dependencies:["C100000000000001"] icon:{id:"minecraft:iron_chestplate"} tasks:[{id:"D100000000000002" type:"item" item:{count:1,id:"minecraft:iron_chestplate"}}] rewards:[{id:"R100000000000002" type:"xp" xp:75}]}
+  {id:"C100000000000003" x:-3.0d y:4.0d dependencies:["C100000000000002"] icon:{id:"minecraft:shield"} tasks:[{id:"D100000000000003" type:"item" item:{count:1,id:"minecraft:shield"}}] rewards:[{id:"R100000000000003" type:"xp" xp:75}]}
+  {id:"C100000000000004" x:0.0d y:2.0d dependencies:["C100000000000001"] icon:{id:"minecraft:bread"} tasks:[{id:"D100000000000004" type:"item" item:{count:4,id:"minecraft:bread"}}] rewards:[{id:"R100000000000004" type:"xp" xp:50}]}
+  {id:"C100000000000005" x:0.0d y:4.0d dependencies:["C100000000000004"] icon:{id:"farmersdelight:cooking_pot"} tasks:[{id:"D100000000000005" type:"item" item:{count:1,id:"farmersdelight:cooking_pot"}}] rewards:[{id:"R100000000000005" type:"xp" xp:100}]}
+  {id:"C100000000000006" x:3.0d y:2.0d dependencies:["C100000000000001"] icon:{id:"ironfurnaces:iron_furnace"} tasks:[{id:"D100000000000006" type:"item" item:{count:1,id:"ironfurnaces:iron_furnace"}}] rewards:[{id:"R100000000000006" type:"xp" xp:75}]}
+  {id:"C100000000000007" x:5.5d y:2.0d dependencies:["C100000000000001"] icon:{id:"easy_villagers:trader"} tasks:[{id:"D100000000000007" type:"item" item:{count:1,id:"easy_villagers:trader"}}] rewards:[{id:"R100000000000007" type:"xp" xp:75}]}
  ]
 }
