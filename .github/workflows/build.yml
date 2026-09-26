@@ -25,54 +25,9 @@ jobs:
       - name: Generate packaged visual assets
         shell: bash
         run: |
-          mkdir -p src/main/resources/assets/peaksandtalons/textures/entity src/main/resources/assets/peaksandtalons/textures/item src/main/resources/assets/peaksandtalons/models/item
+          mkdir -p src/main/resources/assets/peaksandtalons/textures/entity
           echo 'iVBORw0KGgoAAAANSUhEUgAAAGAAAABACAYAAADlNHIOAAABAklEQVR42u3YMQrCQBAF0BzDQm0C1h7CE3hHL2WXLhAQb6CtBCKIhJnsvGK6LZL/smz+dpfT7vU51/Ph66y1fhrvq85w60Nn6b07AAAAAAgEiAp8vr4KwDwfAAAAAMgEEHUotw6wlA8AAG0B9Mf9TwMgGkARAwAAAACHsCIGAACA/4sWgK0DtFrEoj+w8lcRAAAASAlQpYhlCRwAAAAAMgFkKWJV1wMAAEBAmQAEWLQJAxAQgJIAAtGEAQgIQF0AgWjCAAQEAIBANGEAAgLgLkiAmjCAiAd6PoaUA6B1gCxbNitAmSYMAAAAAIG/aVsBaLYJAwAAoCSAIqYJAwAAoCzAGxK0OVeFG2KxAAAAAElFTkSuQmCC' | base64 -d > src/main/resources/assets/peaksandtalons/textures/entity/eagle.png
-          python3 - <<'PY'
-          import struct,zlib
-          from pathlib import Path
-          root=Path('src/main/resources/assets/peaksandtalons'); tex=root/'textures/item'; models=root/'models/item'
-          def out(path,p):
-            w=h=32; raw=b''.join(b'\0'+bytes(sum((list(p[y][x]) for x in range(w)),[])) for y in range(h))
-            def c(t,d):return struct.pack('>I',len(d))+t+d+struct.pack('>I',zlib.crc32(t+d)&0xffffffff)
-            path.write_bytes(b'\x89PNG\r\n\x1a\n'+c(b'IHDR',struct.pack('>IIBBBBB',w,h,8,6,0,0,0))+c(b'IDAT',zlib.compress(raw,9))+c(b'IEND',b''))
-          def blank():return [[(0,0,0,0) for _ in range(32)] for __ in range(32)]
-          def px(a,x,y,c):
-            if 0<=x<32 and 0<=y<32:a[y][x]=c
-          def line(a,x0,y0,x1,y1,c,w=1):
-            dx=abs(x1-x0);sx=1 if x0<x1 else -1;dy=-abs(y1-y0);sy=1 if y0<y1 else -1;e=dx+dy
-            while 1:
-              for ox in range(-(w//2),w//2+1):
-                for oy in range(-(w//2),w//2+1):px(a,x0+ox,y0+oy,c)
-              if (x0,y0)==(x1,y1):break
-              q=2*e
-              if q>=dy:e+=dy;x0+=sx
-              if q<=dx:e+=dx;y0+=sy
-          # Eagle feather: explicit bright feather silhouette with dark outline and central quill.
-          a=blank(); dark=(55,40,28,255); white=(250,246,220,255); cream=(218,200,157,255); brown=(120,77,41,255)
-          rows={3:(15,17),4:(12,19),5:(10,21),6:(9,22),7:(8,23),8:(7,23),9:(7,22),10:(6,22),11:(6,21),12:(6,21),13:(7,20),14:(7,20),15:(8,19),16:(8,19),17:(9,18),18:(9,18),19:(10,17),20:(10,17),21:(11,16),22:(11,16),23:(12,15),24:(12,15)}
-          for y,(l,r) in rows.items():
-            for x in range(l,r+1):px(a,x,y,dark if x in (l,r) else white)
-          for y in range(8,21):
-            for x in range(7,15):
-              if a[y][x][3] and (x+y)%4==0:px(a,x,y,cream)
-          line(a,16,4,13,28,brown,2); line(a,14,11,8,9,brown); line(a,15,8,21,6,brown); line(a,14,16,8,14,brown); line(a,14,20,10,19,brown)
-          out(tex/'eagle_feather.png',a)
-          # Upgrade existing simple weapon assets with layered silhouettes.
-          a=blank(); bone=(238,220,171,255); shade=(156,119,71,255); edge=(48,36,27,255)
-          for i in range(18):
-            x=7+i; y=5+int(i*.65); px(a,x,y,edge);px(a,x,y+1,bone);px(a,x,y+2,bone)
-          line(a,23,16,17,24,shade,3);line(a,17,24,10,28,edge,2);out(tex/'eagle_talon.png',a)
-          a=blank();steel=(133,150,158,255);shine=(225,236,234,255);black=(31,32,36,255);gold=(192,145,51,255);leather=(87,50,31,255)
-          for y in range(3,20):
-            span=max(1,(20-y)//6);line(a,16-span,y,16+span,y,black);line(a,16,y,16,y,shine)
-          line(a,8,20,24,20,gold,3);line(a,16,21,16,29,leather,3);out(tex/'talon_blade.png',a)
-          a=blank();silver=(177,190,194,255);dark=(41,35,46,255);cyan=(65,217,225,255);gold=(191,143,47,255)
-          line(a,16,11,16,30,gold,2);line(a,16,2,16,13,dark,7);line(a,16,3,16,11,silver,3);line(a,8,14,15,12,silver,3);line(a,24,14,17,12,silver,3);px(a,16,7,cyan);px(a,17,7,cyan);out(tex/'talonspire.png',a)
-          a=blank();metal=(119,134,140,255);bright=(218,226,222,255);bronze=(166,108,44,255);red=(163,49,40,255)
-          line(a,16,6,16,30,bronze,3);line(a,8,9,16,5,metal,4);line(a,24,9,16,5,metal,4);line(a,10,10,16,7,bright);line(a,22,10,16,7,bright);line(a,12,19,20,19,red,4);out(tex/'talonteer.png',a)
-          for n in ['eagle_feather','eagle_talon','talon_blade','talonspire','talonteer']:
-            (models/f'{n}.json').write_text('{\n  "parent": "minecraft:item/generated",\n  "textures": { "layer0": "peaksandtalons:item/'+n+'" }\n}\n')
-          PY
+          python3 scripts/generate_visual_assets.py
       - name: Build mod
         run: gradle build --stacktrace
       - name: Verify progression and visual content
@@ -83,17 +38,24 @@ jobs:
           test -f config/ftbquests/quests/chapter_groups.snbt
           test -f config/ftbquests/quests/lang/en_us.snbt
           for chapter in B100000000000001 B100000000000002 B100000000000003 B100000000000004 B200000000000001; do test -f "config/ftbquests/quests/chapters/${chapter}.snbt"; done
+          grep -q 'dependencies:\["C100000000000002"\]' config/ftbquests/quests/chapters/B100000000000001.snbt
+          grep -q 'C100000000000003","C100000000000004","C100000000000005","C100000000000006' config/ftbquests/quests/chapters/B100000000000001.snbt
           grep -q 'max_completable_dependents:1' config/ftbquests/quests/chapters/B100000000000002.snbt
+          grep -q 'peaksandtalons:heart_of_orduk' config/ftbquests/quests/chapters/B100000000000004.snbt
+          grep -q 'explorerscompass:explorerscompass' config/ftbquests/quests/chapters/B100000000000004.snbt
+          test -f src/main/resources/data/peaksandtalons/worldgen/structure/orduks_cave.json
+          test -f src/main/resources/data/peaksandtalons/worldgen/structure_set/orduks_cave.json
+          test -f src/main/resources/data/peaksandtalons/worldgen/template_pool/orduks_cave/start.json
+          grep -q 'explorerscompass:explorerscompass' src/main/java/com/leigh/peaksandtalons/block/OrdukOfferingPodiumBlock.java
           JAR=$(find build/libs -maxdepth 1 -name '*.jar' ! -name '*sources*' ! -name '*javadoc*' | head -n 1)
           test -n "$JAR"
           jar tf "$JAR" | grep -q 'assets/peaksandtalons/textures/entity/eagle.png'
-          for item in eagle_feather eagle_talon talon_blade talonspire talonteer; do
+          for item in talonteer talonspire iron_chain gold_chain netherite_chain heart_of_orduk; do
             jar tf "$JAR" | grep -q "assets/peaksandtalons/models/item/${item}.json"
             jar tf "$JAR" | grep -q "assets/peaksandtalons/textures/item/${item}.png"
           done
           jar tf "$JAR" | grep -q 'data/peaksandtalons/recipe/talonspire.json'
           jar tf "$JAR" | grep -q 'data/peaksandtalons/recipe/talonteer.json'
-          jar tf "$JAR" | grep -q 'data/peaksandtalons/recipe/talon_blade.json'
       - name: Assemble modpack overlay
         shell: bash
         run: |
@@ -107,6 +69,7 @@ jobs:
           PEAKS & TALONS PROGRESSION PLAYTEST
           Extract this ZIP into the ROOT of the Minecraft/CurseForge instance, merging mods/ and config/.
           Keep FTB Quests, FTB Library and FTB Teams installed. Create 6.0.10 is part of the intended progression environment.
+          Test in fresh/unexplored chunks for Orduk cave worldgen changes.
           EOF
       - name: Upload progression playtest
         if: success()
