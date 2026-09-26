@@ -1,0 +1,1 @@
+{"name":"peaksandtalons:orduks_cave/start","fallback":"minecraft:empty","elements":[{"weight":1,"element":{"element_type":"minecraft:single_pool_element","location":"peaksandtalons:orduks_cave","processors":"minecraft:empty","projection":"rigid"}}]}
